@@ -1,7 +1,7 @@
 form{
     overflow: visible;
-   margin-left:400px;
-   margin-right: 400px;
+   margin-left:300px;
+   margin-right: 300px;
    margin-top: 10px;
    margin-bottom:10px ;
    width:800px;
@@ -19,10 +19,11 @@ mat-icon{
     text-align: center;
 }
 mat-toolbar{
-    width:950px; 
-    margin-left: 150px;
+    width:800px; 
+    margin-left: 100px;
   
 }
 h1{
-    padding-left: 350px;
+    padding-left: 320px;
+    color: #ffffff;
 }

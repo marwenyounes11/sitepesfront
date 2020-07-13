@@ -66,9 +66,14 @@ addData() {
   formData.append('file1',this.userFile1);
   formData.append('file2',this.userFile2);
   this.crudApi.createData(formData).subscribe( data => {
-  
-    this.router.navigate(['/candidature/postules']); 
+    this.toastr.success( 'Validation Faite avec Success');
+    this.userFile1="";
+    this.userFile2="";
+    formData.delete('file1');
+    formData.delete('file2');
     this.crudApi.dataForm.reset();
+    this.router.navigate(['/candidature/response']); 
+    
   });
 }
   updateData()

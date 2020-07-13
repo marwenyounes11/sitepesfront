@@ -6,8 +6,8 @@
     
     width:100%;
 }
-a{
-    width: 100px;
+a [mat-tab-link]{
+    width: 80px;
    
 }
 
@@ -32,6 +32,7 @@ header{
 }
 nav
 {
+    width: 1000px;
     float: left;
 }
 

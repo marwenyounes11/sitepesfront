@@ -9,14 +9,18 @@ padding:10px ;
 }
 .socialmedia{
     text-align: center; 
-    margin-left:480px; 
-    margin-right:480px; 
+    margin-left:400px; 
+    margin-right:400px; 
 }
 #all{
     width:100%;
     float:left;
     text-align:center;
     margin-bottom: 50px;
+  }
+  #cop{
+    padding-left: 100px;
+    
   }
   #footer
   {

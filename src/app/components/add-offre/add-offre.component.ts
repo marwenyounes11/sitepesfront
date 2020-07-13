@@ -14,7 +14,7 @@ export class AddOffreComponent implements OnInit {
 
   constructor(public crudApi: OffreService ,public fb: FormBuilder,public toastr: ToastrService,
     private router : Router) { }
-    minDate = new Date(2016, 0, 1);
+    minDate = new Date(2014, 0, 3);
   maxDate = new Date(2020,0,1);
   ngOnInit() {
   

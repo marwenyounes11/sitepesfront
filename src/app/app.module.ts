@@ -8,6 +8,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
+import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -61,6 +62,7 @@ import { AddCandidatureComponent } from './components/add-candidature/add-candid
 import { AddOffreComponent } from './components/add-offre/add-offre.component';
 import { LoginComponent } from './admin/login/login.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { CandidatureresponseComponent } from './components/candidatureresponse/candidatureresponse.component';
 
 
 const appRoutes : Routes = [
@@ -105,7 +107,8 @@ const appRoutes : Routes = [
  ]},
   {path: 'candidature', children: [
     { path: 'offre', component: OffresComponent },
-    { path: 'postules', component: AddCandidatureComponent }
+    { path: 'postules', component: AddCandidatureComponent },
+    { path: 'response', component: CandidatureresponseComponent  }
  ]},
   {path: 'contact', component: ContactComponent},
 
@@ -147,7 +150,8 @@ const appRoutes : Routes = [
     AddCandidatureComponent,
     AddOffreComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    CandidatureresponseComponent
   ],
   imports: [
     BrowserModule,
@@ -161,6 +165,7 @@ const appRoutes : Routes = [
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
     NgxMatFileInputModule,
     MatCardModule,
     MatDatepickerModule,

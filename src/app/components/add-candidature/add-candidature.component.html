@@ -15,7 +15,7 @@
             </div>
         </mat-error>
         </mat-form-field>
-
+       <br> <br>
         <mat-form-field>
           <mat-label>Prenom du candidat</mat-label>
           <input required matInput type="text" placeholder="taper votre prénom" formControlName="prenom" id="prenom">
@@ -26,11 +26,11 @@
             </div>
         </mat-error>
         </mat-form-field>
-      
+        <br> <br>
         <mat-form-field appearance="standard">
           <mat-label>Téléphone du candidat</mat-label>
+          <mat-icon matPrefix>phone</mat-icon>
           <input required matInput  placeholder="taper votre telephone" formControlName="telephone" id="telephone">
-          <mat-icon matSuffix>phone</mat-icon>
           <mat-error
             *ngIf="this.crudApi.dataForm.controls.telephone?.invalid && (this.crudApi.dataForm.controls.telephone.dirty || this.crudApi.dataForm.controls.telephone.touched)">
             <div *ngIf="this.crudApi.dataForm.controls.telephone?.errors.required">
@@ -41,7 +41,7 @@
             </div>
         </mat-error>
         </mat-form-field>
-
+        <br> <br> <br>
         <mat-form-field  class="example-full-width">
           <mat-label>Email</mat-label>
           <mat-icon matPrefix>email</mat-icon>
@@ -54,28 +54,29 @@
            <div *ngIf="this.crudApi.dataForm.controls.email?.invalid">
                Email  invalide.
            </div>
-       </mat-error>
-          </mat-form-field>
-     
-        <!--  <mat-form-field>
-            <mat-label>Type</mat-label>
-            <mat-select  matInput formControlName="type" id="type">
-                <mat-option value="spontane">
-                  spontane
-                </mat-option>
-                <mat-option value="non-spontane">
-                  non-spontane
-                </mat-option>
-            </mat-select>
-            <mat-error
-                *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
-                <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
-                  Type obligatoire
-                </div>
-            </mat-error>
-        </mat-form-field> -->
-     
-
+          </mat-error>
+        </mat-form-field>
+        <br> <br> <br>
+       
+        <mat-form-field appearance="fill">
+          <mat-label>Type</mat-label>
+          <mat-select formControlName="type"  required>
+            <mat-option value="spontane">
+              spontane
+            </mat-option>
+            <mat-option value="non-spontane">
+              non-spontane
+            </mat-option>
+          </mat-select>
+          <mat-error
+          *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
+          <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
+            Type obligatoire
+          </div>
+          </mat-error>
+        </mat-form-field>
+      
+        <br> <br>
      
    
       <div class="form-group">
