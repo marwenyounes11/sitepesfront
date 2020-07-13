@@ -1,0 +1,20 @@
+form{
+    overflow: visible;
+   margin-left:100px;
+   margin-right: 100px;
+   margin-top: 10px;
+   margin-bottom:10px ;
+   width:800px;
+}
+
+button {
+width: 200px;
+justify-content: center;
+}
+mat-form-field{
+    width:400px; 
+}
+
+mat-icon{
+    text-align: center;
+}

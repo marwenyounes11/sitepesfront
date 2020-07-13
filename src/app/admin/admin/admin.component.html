@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" >
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <a href="index.html" class="logo">ELAN <span class="lite">/PES</span></a>
+  
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button routerLink="/logout"> logout </a>
+    </div>
+   
+  </mat-toolbar-row>
+
+  
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [matMenuTriggerFor] = "m1"  >  <span>Gestion Articles</span> </a>
+       <mat-menu #m1 = "matMenu">
+        <a mat-menu-item routerLink="/admin/larticle">List Articles</a>
+        <a mat-menu-item routerLink="/admin/article">Add Article</a>
+      </mat-menu>
+
+      <a mat-list-item [matMenuTriggerFor] = "m2"  >  <span>Gestion Offres d'emploi</span> </a>
+      <mat-menu #m2 = "matMenu">
+       <a mat-menu-item routerLink="/admin/offres">List Offres</a>
+       <a mat-menu-item routerLink="/admin/addoffre">Add Offre</a>
+     </mat-menu>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="contenu" style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

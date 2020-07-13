@@ -1,0 +1,23 @@
+
+<div class="container">
+    
+        <div *ngFor="let item of crudApi.listData">
+            <div class="col-md-4 " >
+                <mat-card class="example-card">
+                    <img class="card-img-top img-responsive"
+                        src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
+                        style = "height :200px;width:fil-content"
+                       alt="">
+                        
+                    <mat-card-content>
+                        <p>{{item.titre}}</p>
+                        <p><b> {{item.auteur}} </b></p>
+                        <p> {{item.date}}  </p>
+                        <p> {{item.corps}} </p>
+                    </mat-card-content>
+                   
+                </mat-card>
+            </div>
+        </div>
+    
+</div>

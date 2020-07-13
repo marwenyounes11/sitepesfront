@@ -1,0 +1,51 @@
+.contact {
+display: inline;
+padding:10px ;
+}
+
+.suivre {
+    padding-left: 10px;
+    
+}
+.socialmedia{
+    text-align: center; 
+    margin-left:480px; 
+    margin-right:480px; 
+}
+#all{
+    width:100%;
+    float:left;
+    text-align:center;
+    margin-bottom: 50px;
+  }
+  #footer
+  {
+      background-color:olivedrab;
+      width:100%;
+  }
+  .contacter{
+padding-top:15px ;
+padding-right: 15px;
+  }
+
+  .apropos{
+    padding-top:15px ;
+    padding-right: 15px;
+  }
+
+  .speed{
+    padding-top:15px ;
+    padding-right: 15px;
+  }
+
+  .ouverture{
+    width: 100%;
+   
+   text-align: left;
+  }
+  .rs
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+  }

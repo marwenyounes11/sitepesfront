@@ -1,0 +1,28 @@
+form{
+    overflow: visible;
+   margin-left:400px;
+   margin-right: 400px;
+   margin-top: 10px;
+   margin-bottom:10px ;
+   width:800px;
+}
+
+button {
+width: 200px;
+justify-content: center;
+}
+mat-form-field{
+    width:400px; 
+}
+
+mat-icon{
+    text-align: center;
+}
+mat-toolbar{
+    width:950px; 
+    margin-left: 150px;
+  
+}
+h1{
+    padding-left: 350px;
+}

@@ -1,0 +1,43 @@
+.menu{
+    display: inline;
+}
+.tabs
+{
+    
+    width:100%;
+}
+a{
+    width: 100px;
+   
+}
+
+ a:hover{
+    background-color: #185fac;
+}
+mat-toolbar{
+    background-color:#FFFFFF;
+    text-align:center;
+   
+    
+}
+img {
+    max-width: 100%;
+    
+}
+mat-toolbar-row{
+    margin:20px 20px 20px 20px;
+}
+header{
+    width: 100%;
+}
+nav
+{
+    float: left;
+}
+
+.w3-red{
+    background-color: brown;
+}
+.w3-blanc{
+    background-color: #FFFFFF;
+}
