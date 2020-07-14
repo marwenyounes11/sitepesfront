@@ -1,11 +1,7 @@
 .menu{
     display: inline;
 }
-.tabs
-{
-    
-    width:100%;
-}
+
 a [mat-tab-link]{
     width: 80px;
    
