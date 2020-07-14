@@ -1,10 +1,12 @@
 form{
-    overflow: visible;
-   margin-left:300px;
-   margin-right: 300px;
-   margin-top: 10px;
-   margin-bottom:10px ;
-   width:800px;
+  
+    margin-left: 280px;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+   
+    justify-content:center ;
 }
 
 button {
@@ -21,12 +23,18 @@ select{
 mat-icon{
     text-align: center;
 }
-mat-toolbar{
-    width:800px; 
-    margin-left: 100px;
-  
-}
+
 h1{
-    padding-left: 270px;
+    padding-left: 100px;
     color: #ffffff;
+}
+
+mat-toolbar{
+    margin-left: 200px;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+   
+   
 }

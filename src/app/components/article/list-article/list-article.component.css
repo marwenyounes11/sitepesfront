@@ -1,0 +1,18 @@
+mat-toolbar{
+    margin-left: 200px;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+   
+    justify-content:center ;
+}
+.content{
+    margin-left: 200px;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 450px;
+    justify-content:center ;
+}

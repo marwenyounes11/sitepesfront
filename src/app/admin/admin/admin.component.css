@@ -1,24 +1,9 @@
-.contenu{
-   
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-top: 50px;
-    margin-right: 50px;
-    width: 600px;
-    height: 450px;
-    justify-content:center ;
-    
-}
 
 .logo{
     margin-right: 25px;
     margin-left: 25px;
     color:blanchedalmond;
 
-}
-router-outlet{
-    position: fixed;
-    
 }
 
 mat-toolbar{

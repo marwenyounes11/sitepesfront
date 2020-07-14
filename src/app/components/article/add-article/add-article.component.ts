@@ -63,7 +63,7 @@ addData() {
     this.crudApi.updatedata(this.crudApi.dataForm.value.id,this.crudApi.dataForm.value).
     subscribe( data => {
       this.dialogRef.close();
-      this.router.navigate(['/larticle']); 
+      this.router.navigate(['/admin/larticle']); 
     });
   }
 

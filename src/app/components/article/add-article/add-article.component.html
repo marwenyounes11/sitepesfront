@@ -27,20 +27,19 @@
     <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <br>
-
-    <mat-form-field>
-      <ngx-mat-file-input [formControl]="fileControl"  [accept]="image/*"
-      [color]="color">
-         <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+   <mat-form-field>
+      <ngx-mat-file-input  placeholder="Basic Input" (change)="onSelectFile($event)">
       </ngx-mat-file-input>
-   </mat-form-field>
+    </mat-form-field> 
+    
 
-    <div class="form-group">
+   <!-- <div class="form-group">
       <label>File Upload  </label> <br>
           <input type="file" accept="image/*" (change)="onSelectFile($event)"> <br>
           <img  [src]="imgURL" height="200" *ngIf="imgURL">
-  </div>
-  
+  </div> -->
+
+
   <br>
 
       <mat-form-field class="example-full-width">
