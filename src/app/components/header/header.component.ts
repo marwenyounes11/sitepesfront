@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+
 
 @Component({
   selector: 'app-header',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vps: ViewportScroller) { }
 
   ngOnInit(): void {
   }
-
+  scroll(id) {
+    this.vps.scrollToAnchor(id);
+  }
   openTab() {
     /**  var i, x, tablinks;
     

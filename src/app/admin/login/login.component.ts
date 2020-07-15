@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';  
+
 import { ToastrService } from 'ngx-toastr';
 import { AdminService} from '../../components/service/admin.service';
-import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule,Validators }
-from '@angular/forms';
+
 import { Router } from '@angular/router';
 
-import { DatePipe }         from '@angular/common';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

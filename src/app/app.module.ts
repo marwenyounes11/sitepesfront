@@ -40,7 +40,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EmplacementComponent } from './components/emplacement/emplacement.component';
-import { DropdownDirective } from './components/dropdown.directive';
+
 import { ElanComponent } from './components/elan/elan.component';
 import { PesComponent } from './components/pes/pes.component';
 import { RhComponent } from './components/rh/rh.component';
@@ -63,6 +63,7 @@ import { AddOffreComponent } from './components/add-offre/add-offre.component';
 import { LoginComponent } from './admin/login/login.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { CandidatureresponseComponent } from './components/candidatureresponse/candidatureresponse.component';
+import { PressComponent } from './components/press/press.component';
 
 
 const appRoutes : Routes = [
@@ -103,6 +104,7 @@ const appRoutes : Routes = [
   {path: 'actualites', redirectTo:'acceuil#page'},
   {path: 'medias', children: [
     { path: 'photos', component: PhotosComponent },
+    { path: 'press', component: PressComponent },
     { path: 'videos', component: VideosComponent }
  ]},
   {path: 'candidature', children: [
@@ -130,7 +132,6 @@ const appRoutes : Routes = [
     HeaderComponent,
     FooterComponent,
     EmplacementComponent,
-    DropdownDirective,
     ElanComponent,
     PesComponent,
     RhComponent,
@@ -151,7 +152,8 @@ const appRoutes : Routes = [
     AddOffreComponent,
     LoginComponent,
     AdminComponent,
-    CandidatureresponseComponent
+    CandidatureresponseComponent,
+    PressComponent
   ],
   imports: [
     BrowserModule,

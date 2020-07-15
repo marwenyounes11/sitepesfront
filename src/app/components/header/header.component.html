@@ -1,10 +1,10 @@
 <html>
 <head>
-  <script src="https://code.jquery.com/jquery-3.3.1.js">
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.js">
   $('#ancre').click(function(){
-$(document).scrollTop(500) //any value you need
+$(document).scrollTop(1000) //any value you need
 });
-  </script>
+  </script>-->
 
 </head>
 
@@ -56,7 +56,7 @@ $(document).scrollTop(500) //any value you need
              partenariats
              </a>
              <a mat-tab-link
-             routerLink="/actualites" id="ancre" class="tablink  w3-blanc" (click)="openTab()">
+             routerLink="/actualites"  (click)="scroll('target')" class="tablink  w3-blanc" (click)="openTab()">
              Actualités
              </a>
              <a mat-tab-link
@@ -64,6 +64,7 @@ $(document).scrollTop(500) //any value you need
            </a>
            <mat-menu #media = "matMenu">
             <a mat-menu-item routerLink="/medias/photos" class="tablink  w3-blanc" (click)="openTab()">Galeries photos</a>
+            <a mat-menu-item routerLink="/medias/press" class="tablink  w3-blanc" (click)="openTab()">Presse</a>
             <a mat-menu-item routerLink="/medias/videos" class="tablink  w3-blanc" (click)="openTab()">vidéos</a>
            </mat-menu>
            <a mat-tab-link
