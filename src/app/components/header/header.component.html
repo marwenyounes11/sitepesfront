@@ -1,3 +1,14 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.js">
+  $('#ancre').click(function(){
+$(document).scrollTop(500) //any value you need
+});
+  </script>
+
+</head>
+
+<body>
   <header>
   <mat-toolbar >
     <mat-toolbar-row> 
@@ -45,7 +56,7 @@
              partenariats
              </a>
              <a mat-tab-link
-             routerLink="/actualites" class="tablink  w3-blanc" (click)="openTab()">
+             routerLink="/actualites" id="ancre" class="tablink  w3-blanc" (click)="openTab()">
              Actualités
              </a>
              <a mat-tab-link
@@ -72,4 +83,5 @@
 </mat-toolbar>
 
 </header>
-
+</body>
+</html>

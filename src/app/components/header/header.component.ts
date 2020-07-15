@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   openTab() {
     /**  var i, x, tablinks;
     
