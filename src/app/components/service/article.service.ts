@@ -9,10 +9,8 @@ from '@angular/forms';
   providedIn: 'root'
 })
 export class ArticleService {
-  private baseUrl = '/api/articles';
-  
-  host :string = "http://localhost:8085";
 
+  host :string = "http://localhost:8085";
   choixmenu : string  = 'A';
   listData : Article[];
   public dataForm:  FormGroup; 
@@ -21,7 +19,7 @@ export class ArticleService {
   
 
   getData(id: number): Observable<Object> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+    return this.http.get('http://localhost:8085/api/articles/${id}');
   }
  
   createData(formData: FormData): Observable<any> {
@@ -29,12 +27,12 @@ export class ArticleService {
   }
   
   updatedata(id: number, value: any): Observable<Object> {
-    return this.http.put(`http://localhost:8085/api/articles/${id}`, value);
+    return this.http.put('http://localhost:8085/api/articles/${id}', value);
   }
  
   deleteData(id: number): Observable<any> {
    
-    return this.http.delete(`http://localhost:8085/api/articles/${id}`, { responseType: 'text' });
+    return this.http.delete('http://localhost:8085/api/articles/${id}', { responseType: 'text' });
   }
 
   getAll(): Observable<any> {

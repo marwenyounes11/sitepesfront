@@ -24,29 +24,29 @@ export class AdminService {
   constructor(private http: HttpClient,private datePipe: DatePipe) { }
   login(login: String): Observable<Object> {
     
-     return this.http.get(`http://localhost:8085/api/users/l/${login}`);
+     return this.http.get('http://localhost:8085/api/users/l/${login}');
    }  
  
   getData(id: number): Observable<Object> {
-    return this.http.get(`http://localhost:8085/api/users/${id}`);
+    return this.http.get('http://localhost:8085/api/users/${id}');
   }
  
   createData(info: Object): Observable<Object> {
-    return this.http.post(`http://localhost:8085/api/users`, info);
+    return this.http.post('http://localhost:8085/api/users', info);
   }
   
   updatedata(id: number, value: any): Observable<Object> {
-    return this.http.put(`http://localhost:8085/api/users/${id}`, value);
+    return this.http.put('http://localhost:8085/api/users/${id}', value);
   }
  
   deleteData(id: number): Observable<any> {
    
-    return this.http.delete(`http://localhost:8085/api/users/${id}`, { responseType: 'text' });
+    return this.http.delete('http://localhost:8085/api/users/${id}', { responseType: 'text' });
   }
 
   getAll(): Observable<any> {
    
-    return this.http.get(`http://localhost:8085/api/users`);
+    return this.http.get('http://localhost:8085/api/users');
   }
   transformDate(date){
     return this.datePipe.transform(date, 'yyyy-MM-dd');

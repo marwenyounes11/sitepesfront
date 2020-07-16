@@ -1,10 +1,11 @@
 import { BrowserModule  } from '@angular/platform-browser';
-import { NgModule , NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
@@ -19,7 +20,7 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule,MatDialogRef, } from '@angular/material/dialog';
 import {MAT_DIALOG_DATA } from "@angular/material/dialog";
-import {HttpClientModule } from '@angular/common/http';
+import {HttpClientModule , HttpClient} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import {ToastrModule } from 'ngx-toastr';
 import {AgmCoreModule } from '@agm/core';
@@ -164,6 +165,7 @@ const appRoutes : Routes = [
     MaterialModule,
     MatDialogModule,
     MatToolbarModule,
+    MatMenuModule, 
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -185,8 +187,8 @@ const appRoutes : Routes = [
       
     })
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [DatePipe, MatDatepickerModule,
+  schemas: [ NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA ],
+  providers: [DatePipe,HttpClientModule, HttpClient,MatDatepickerModule,
     MatNativeDateModule,{ provide: MAT_DIALOG_DATA, useValue: {} ,},
     { provide: MatDialogRef, useValue: {} }],
   exports: [RouterModule],
