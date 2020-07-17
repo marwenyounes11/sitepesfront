@@ -24,10 +24,10 @@ $(document).scrollTop(1000) //any value you need
                  Acceuil
                </a>
                <a mat-tab-link
-                 [matMenuTriggerFor] = "menu" class="tablink w3-blanc" routerLink="/presentation" (click)="openTab()">
+                 [matMenuTriggerFor] = "pr" class="tablink w3-blanc" routerLink="/presentation" (click)="openTab()">
                  Presentation
                </a>
-               <mat-menu #menu = "matMenu">
+               <mat-menu #pr ='matMenu'>
                 <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/souspresentation" (click)="openTab()">Qui sommes nous</a>
                 <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/prospectus" (click)="openTab()">Prospectus</a>
                 <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/emplacement" (click)="openTab()">Emplacement</a>
@@ -36,17 +36,17 @@ $(document).scrollTop(1000) //any value you need
                  [matMenuTriggerFor] = "m1" routerLink="/nosee" class="tablink w3-blanc" (click)="openTab()">
                  Nos EE
                </a>
-               <mat-menu #m1 = "matMenu">
+               <mat-menu #m1 ="matMenu">
                 <a mat-menu-item [matMenuTriggerFor] = "elan" routerLink="/nosee/elan" class="tablink w3-blanc" (click)="openTab()">ELAN</a>
                 <a mat-menu-item [matMenuTriggerFor] = "pes" routerLink="/nosee/pes"  class="tablink w3-blanc" (click)="openTab()">PES</a>
               </mat-menu>
-              <mat-menu #elan = "matMenu">
+              <mat-menu #elan ="matMenu">
                 <a mat-menu-item routerLink="/nosee/elan/finance" class="tablink w3-blanc" (click)="openTab()">Finance</a>
                 <a mat-menu-item routerLink="/nosee/elan/rh" class="tablink w3-blanc" (click)="openTab()">RH</a>
                 <a mat-menu-item routerLink="/nosee/elan/comptabilite" class="tablink w3-blanc" (click)="openTab()">Comptabilité</a>
                 <a mat-menu-item routerLink="/nosee/elan/commerce" class="tablink w3-blanc" (click)="openTab()">Commerce</a>
              </mat-menu>
-             <mat-menu #pes = "matMenu">
+             <mat-menu #pes ="matMenu">
                 <a mat-menu-item routerLink="/nosee/pes/marketing" class="tablink  w3-blanc" (click)="openTab()">Marketing</a>
                 <a mat-menu-item routerLink="/nosee/pes/developpement" class="tablink  w3-blanc" (click)="openTab()">Developpement</a>
                 <a mat-menu-item routerLink="/nosee/pes/design"  class="tablink  w3-blanc" (click)="openTab()">Design</a>
@@ -62,14 +62,14 @@ $(document).scrollTop(1000) //any value you need
              <a mat-tab-link
              [matMenuTriggerFor] = "media" routerLink="/medias" class="tablink  w3-blanc" (click)="openTab()">Médias
            </a>
-           <mat-menu #media = "matMenu">
+           <mat-menu #media ="matMenu">
             <a mat-menu-item routerLink="/medias/photos" class="tablink  w3-blanc" (click)="openTab()">Galeries photos</a>
             <a mat-menu-item routerLink="/medias/press" class="tablink  w3-blanc" (click)="openTab()">Presse</a>
             <a mat-menu-item routerLink="/medias/videos" class="tablink  w3-blanc" (click)="openTab()">vidéos</a>
            </mat-menu>
            <a mat-tab-link
            [matMenuTriggerFor]  = "candidat" routerLink="/candidature" class="tablink  w3-blanc" (click)="openTab()">Candidatures</a>
-           <mat-menu #candidat = "matMenu">
+           <mat-menu #candidat ="matMenu">
             <a mat-menu-item routerLink="/candidature/offre" class="tablink  w3-blanc" (click)="openTab()">offre d'emploi</a>
             <a mat-menu-item routerLink="/candidature/postules" class="tablink  w3-blanc" (click)="openTab()">postuler pour offre</a>
            </mat-menu>

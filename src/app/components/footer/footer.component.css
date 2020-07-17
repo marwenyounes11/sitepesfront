@@ -40,7 +40,18 @@ padding-right: 15px;
   .speed{
     padding-top:15px ;
     padding-right: 15px;
+   
+  
   }
+  .speed a{
+   color: blue;
+  
+  }
+
+  .apropos a{
+    color: blue;
+   
+   }
 
   .ouverture{
     width: 100%;

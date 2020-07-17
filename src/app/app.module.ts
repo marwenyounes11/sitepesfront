@@ -14,9 +14,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card'; 
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import {MatDatepickerModule } from '@angular/material/datepicker';
+import {MatNativeDateModule } from '@angular/material/core';
+import {NgxMatFileInputModule } from '@angular-material-components/file-input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule,MatDialogRef, } from '@angular/material/dialog';
 import {MAT_DIALOG_DATA } from "@angular/material/dialog";
@@ -25,9 +25,7 @@ import {FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import {ToastrModule } from 'ngx-toastr';
 import {AgmCoreModule } from '@agm/core';
 import {DatePipe } from '@angular/common';
-
 import {AppComponent } from './app.component';
-
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { SouspresentationComponent } from './components/souspresentation/souspresentation.component';
@@ -41,7 +39,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EmplacementComponent } from './components/emplacement/emplacement.component';
-
 import { ElanComponent } from './components/elan/elan.component';
 import { PesComponent } from './components/pes/pes.component';
 import { RhComponent } from './components/rh/rh.component';
@@ -115,7 +112,6 @@ const appRoutes : Routes = [
  ]},
   {path: 'contact', component: ContactComponent},
 
-  
   
 ];
 

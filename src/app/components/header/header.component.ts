@@ -25,8 +25,5 @@ export class HeaderComponent implements OnInit {
     }
     */
   }
-  onNavigate(){
-   
-    window.location.href="acceuil#page";
-}
+  
 }
