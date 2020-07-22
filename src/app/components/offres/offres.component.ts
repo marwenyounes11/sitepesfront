@@ -24,6 +24,7 @@ export class OffresComponent implements OnInit {
     private router : Router,public fb: FormBuilder,
     private matDialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
+    
     public dialogRef:MatDialogRef<AddOffreComponent>,) { }
  
   ngOnInit() {

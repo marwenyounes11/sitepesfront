@@ -15,7 +15,8 @@ export class AdminService {
   
   
   private baseUrl = '/api/users';
- 
+  private baseUrl1 = 'http://localhost:8085/api/users/5';
+
   islogin = false;
   admin = false;
   suser = false;
@@ -25,8 +26,8 @@ export class AdminService {
   constructor(private http: HttpClient,private datePipe: DatePipe) { }
   login(login: String): Observable<Object> {
     
-     return this.http.get('http://localhost:8085/api/users/l/${login}');
-   }  
+    return this.http.get(`${this.baseUrl1}/${login}`);
+  }  
  
   getData(id: number): Observable<Object> {
     return this.http.get('http://localhost:8085/api/users/${id}');
