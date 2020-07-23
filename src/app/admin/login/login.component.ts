@@ -55,17 +55,12 @@ export class LoginComponent implements OnInit {
               {
                 this.toastr.warning( 'Mot de Passe  Incorrecte ')
                }
-
           },
           error => 
           
             this.toastr.warning( 'Login Incorrecte ')
-         
-          
           );
-     
-   
-        
+      
     
     }
    
@@ -76,6 +71,5 @@ export class LoginComponent implements OnInit {
     logout() {
      
       localStorage.removeItem('name');
-      
   }
 }
