@@ -1,50 +1,45 @@
 import { Injectable } from '@angular/core';
 import { HttpClient , HttpRequest, HttpEvent} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Article} from '../model/article'
+import { Medias} from '../model/medias'
 import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule,Validators }
 from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ArticleService {
-
+export class MediasService {
   host :string = "http://localhost:8085";
   choixmenu : string  = 'A';
-  listData : Article[];
-  lastData : Article[];
+  listData : Medias[];
   public dataForm:  FormGroup; 
   constructor(private http: HttpClient) { }
  
   
 
   getData(id: number): Observable<Object> {
-    return this.http.get('http://localhost:8085/api/articles/${id}');
+    return this.http.get('http://localhost:8085/api/medias/${id}');
   }
  
   createData(formData: FormData): Observable<any> {
-    return this.http.post('http://localhost:8085/api/articles', formData);
+    return this.http.post('http://localhost:8085/api/medias', formData);
   }
   
   updatedata(id: number, value: any): Observable<Object> {
-    return this.http.put('http://localhost:8085/api/articles/${id}', value);
+    return this.http.put('http://localhost:8085/api/medias/${id}', value);
   }
  
   deleteData(id: number): Observable<any> {
    
-    return this.http.delete('http://localhost:8085/api/articles/${id}', { responseType: 'text' });
+    return this.http.delete('http://localhost:8085/api/medias/${id}', { responseType: 'text' });
   }
 
   getAll(): Observable<any> {
    
-    return this.http.get('http://localhost:8085/api/articles');
+    return this.http.get('http://localhost:8085/api/medias');
   }
 
-  getLast(): Observable<any> {
-   
-    return this.http.get('http://localhost:8085/api/larticles');
-  }
+ 
 
   uploadFile(file: File): Observable<HttpEvent<{}>> {
 		const formdata: FormData = new FormData();

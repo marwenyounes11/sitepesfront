@@ -33,7 +33,7 @@ import { ProspectusComponent } from './components/prospectus/prospectus.componen
 import { NoseeComponent } from './components/nosee/nosee.component';
 import { ParetenariatsComponent } from './components/paretenariats/paretenariats.component';
 import { ActualitesComponent } from './components/actualites/actualites.component';
-import { MediasComponent } from './components/medias/medias.component';
+
 import { CandidatureComponent } from './components/candidature/candidature.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -123,7 +123,6 @@ const appRoutes : Routes = [
     NoseeComponent,
     ParetenariatsComponent,
     ActualitesComponent,
-    MediasComponent,
     CandidatureComponent,
     ContactComponent,
     HeaderComponent,

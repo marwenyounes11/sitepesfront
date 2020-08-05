@@ -18,6 +18,7 @@ import { AddArticleComponent } from '../../article/add-article/add-article.compo
 })
 export class ArticleComponent implements OnInit {
   article : Article;
+  dernier:Boolean =false;
   control: FormControl = new FormControl('');
   constructor(public crudApi: ArticleService, public toastr: ToastrService,
     private router : Router,public fb: FormBuilder,
@@ -27,7 +28,10 @@ export class ArticleComponent implements OnInit {
  
   ngOnInit() {
     
-    this.getData();
+      this.getLast();
+      this.getData();
+   
+    
   }
   addarticle()
   {
@@ -46,6 +50,13 @@ export class ArticleComponent implements OnInit {
   getData() {
     this.crudApi.getAll().subscribe(
       response =>{this.crudApi.listData = response;}
+     );
+   
+  }
+
+  getLast() {
+    this.crudApi.getLast().subscribe(
+      response =>{this.crudApi.lastData = response;}
      );
    
   }
