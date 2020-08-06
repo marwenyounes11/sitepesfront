@@ -62,6 +62,8 @@ import { LoginComponent } from './admin/login/login.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { CandidatureresponseComponent } from './components/candidatureresponse/candidatureresponse.component';
 import { PressComponent } from './components/press/press.component';
+import { AddMediasComponent } from './components/medias/add-medias/add-medias.component';
+import {MediasComponent } from './components/medias/medias/medias.component';
 
 
 const appRoutes : Routes = [
@@ -70,20 +72,20 @@ const appRoutes : Routes = [
   {path: 'admin', component: AdminComponent,children: [
   {path: 'larticle', component: ListArticleComponent},
   {path: 'article', component: AddArticleComponent},
+  {path: 'lmedias', component: MediasComponent},
+  {path: 'medias', component: AddMediasComponent},
   {path: 'addoffre', component: AddOffreComponent},
   { path: 'offres', component: OffresComponent },
  ]},
 
   
   {path: 'logout', redirectTo:'login'},
- 
   {path: 'acceuil', component: AcceuilComponent},
   {path: 'presentation', children: [
     { path: 'souspresentation', component: SouspresentationComponent },
     { path: 'prospectus', component: ProspectusComponent },
     { path: 'emplacement', component: EmplacementComponent }
  ]
-  
     },
   {path: 'nosee', children: [
     { path: 'elan', children: [
@@ -142,6 +144,8 @@ const appRoutes : Routes = [
     ArticleComponent,
     AddArticleComponent,
     ListArticleComponent,
+    MediasComponent,
+    AddMediasComponent,
     OffresComponent,
     PostuleComponent,
     AddCandidatureComponent,
