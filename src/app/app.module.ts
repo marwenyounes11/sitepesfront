@@ -64,12 +64,18 @@ import { CandidatureresponseComponent } from './components/candidatureresponse/c
 import { PressComponent } from './components/press/press.component';
 import { AddMediasComponent } from './components/medias/add-medias/add-medias.component';
 import {MediasComponent } from './components/medias/medias/medias.component';
+import { AuthGuardService } from './admin/auth/auth-guard.service';
+import { MenuComponent } from './menu/menu.component';
 
 
 const appRoutes : Routes = [
-  {path: '', component:AcceuilComponent },
+  
+  
   {path: 'login', component: LoginComponent},
-  {path: 'admin', component: AdminComponent,children: [
+  {path: 'logout', redirectTo:'login'},
+  {path: 'admin', component: AdminComponent,canActivate: [
+    AuthGuardService
+],children: [
   {path: 'larticle', component: ListArticleComponent},
   {path: 'article', component: AddArticleComponent},
   {path: 'lmedias', component: MediasComponent},
@@ -79,7 +85,7 @@ const appRoutes : Routes = [
  ]},
 
   
-  {path: 'logout', redirectTo:'login'},
+ {path: '',component: MenuComponent, children: [
   {path: 'acceuil', component: AcceuilComponent},
   {path: 'presentation', children: [
     { path: 'souspresentation', component: SouspresentationComponent },
@@ -113,7 +119,7 @@ const appRoutes : Routes = [
     { path: 'response', component: CandidatureresponseComponent  }
  ]},
   {path: 'contact', component: ContactComponent},
-
+]},
   
 ];
 
@@ -153,7 +159,8 @@ const appRoutes : Routes = [
     LoginComponent,
     AdminComponent,
     CandidatureresponseComponent,
-    PressComponent
+    PressComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

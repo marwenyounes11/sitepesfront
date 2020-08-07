@@ -3,24 +3,14 @@ h1{
     
  }
 
-.rows{
-    
-   margin-top: 20px;
-    margin-bottom:20px ;
-    justify-content: center;
-  
-}
-img
-{
-    vertical-align: middle;
+
+.center{
+    margin-left: 200px ;
+    margin-right: 200px ;
 }
 
-
-.port-image
-{
-    width: 100%;
-}
 
 h2{
     text-align: center;
 }
+

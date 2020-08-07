@@ -38,7 +38,11 @@
         </mat-error>
       </mat-form-field>
     
-
+      <mat-form-field>
+        <mat-label>Titre</mat-label>
+        <input matInput type="text" placeholder="taper le titre" formControlName="titre" id="titre">
+      </mat-form-field>
+     <br>
     <div class="form-group">
       <label>File Upload  </label> <br>
           <input type="file" accept="image/*" (change)="onSelectFile($event)"> <br>

@@ -29,7 +29,8 @@ export class AddMediasComponent implements OnInit {
   infoForm() {
     this.crudApi.dataForm = this.fb.group({
        
-        type: ['', [Validators.required]]
+        type : ['', [Validators.required]],
+        titre : ['', [Validators.required]]
        
       });
     }

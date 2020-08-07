@@ -75,7 +75,6 @@ export class MediasComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
-    
     this.matDialog.open(AddMediasComponent, dialogConfig);
   }
 }
