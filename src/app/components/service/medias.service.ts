@@ -12,6 +12,11 @@ export class MediasService {
   host :string = "http://localhost:8085";
   choixmenu : string  = 'A';
   listData : Medias[];
+  ctp : Medias[];
+  coach: Medias[];
+ evenement : Medias[];
+  atelier : Medias[];
+  press : Medias[];
   public dataForm:  FormGroup; 
   constructor(private http: HttpClient) { }
  
@@ -33,7 +38,27 @@ export class MediasService {
    
     return this.http.delete('http://localhost:8085/api/medias/${id}', { responseType: 'text' });
   }
+  getMediasCoach(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/mediascoach');
+  }
 
+  getMediasCtp(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/mediasctp');
+  }
+  getMediasEvenement(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/mediasevenement');
+  }
+  getMediasAtelier(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/mediasatelier');
+  }
+  getMediasPress(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/mediaspress');
+  }
   getAll(): Observable<any> {
    
     return this.http.get('http://localhost:8085/api/medias');

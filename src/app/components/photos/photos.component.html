@@ -9,98 +9,93 @@
 
 <div class="container content">
     <h2>list coach</h2>
+  <div *ngFor="let item of crudApi.coach">
+    
     <div class="row rows">
        
         <div class="col-md-2 " >
-            <mat-card class="example-card" >
+            <mat-card class="example-card">
                 <img class="card-img-top img-responsive"
-                            src = "assets/images/project-4.jpg" 
-                           alt="">
-            </mat-card>
+                    src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                    style = "height :100px;width:fil-content"
+                   alt="">
+                  </mat-card>
+                  
         
         </div>
 
-        <div class="col-md-2 " >
-            <mat-card class="example-card">
-                <img class="card-img-top img-responsive"
-                            src = "assets/images/project-3.jpg" 
-                            alt="">
-            </mat-card>
         
-        </div>
-
-        <div class="col-md-2 " >
-            <mat-card class="example-card">
-                <img class="card-img-top img-responsive"
-                            src = "assets/images/project-2.jpg" 
-                           alt="">
-            </mat-card>
-        
-        </div>
     </div>
-    <h2>Collaborateurs temporaires en perfectionnement</h2>
+  </div>
+  <h2>Collaborateurs temporaires en perfectionnement</h2>
+  <div *ngFor="let item of crudApi.ctp"> 
         <div class="row rows">
             <div class="col-md-2 " >
                 <mat-card class="example-card">
                     <img class="card-img-top img-responsive"
-                        src = "assets/images/img_bg_3.jpg" 
-                        
+                        src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                        style = "height :100px;width:fil-content"
                        alt="">
-                </mat-card>
+                      </mat-card>
             
             </div>
     
-            <div class="col-md-2 " >
-                <mat-card class="example-card">
-                    <img class="card-img-top img-responsive"
-                        src = "assets/images/img_bg_4.jpg" 
-                        
-                       alt="">
-                </mat-card>
-            
-            </div>
-    
-            <div class="col-md-2 " >
-                <mat-card class="example-card">
-                    <img class="card-img-top img-responsive"
-                        src = "assets/images/project-1.jpg" 
-                        
-                       alt="">
-                </mat-card>
-            
-            </div>
+           
         </div>
+  </div>
+  <h2>Evenements</h2>
+  <div *ngFor="let item of crudApi.evenement"> 
             <div class="row rows">
                 <div class="col-md-2 " >
                     <mat-card class="example-card">
                         <img class="card-img-top img-responsive"
-                            src = "assets/images/project-4.jpg" 
-                           
+                            src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                            style = "height :100px;width:fil-content"
                            alt="">
-                    </mat-card>
+                          </mat-card>
                 
                 </div>
         
-                <div class="col-md-2 " >
-                    <mat-card class="example-card">
-                        <img class="card-img-top img-responsive"
-                            src = "assets/images/project-3.jpg" 
-                           
-                           alt="">
-                    </mat-card>
-                
-                </div>
-        
-                <div class="col-md-2 " >
-                    <mat-card class="example-card">
-                        <img class="card-img-top img-responsive"
-                            src = "assets/images/project-2.jpg" 
-                          
-                           alt="">
-                    </mat-card>
-                
-                </div>
+               
             </div>
+
+ </div>
+ <h2>Ateliers</h2>
+ <div *ngFor="let item of crudApi.atelier"> 
+            <div class="row rows">
+                <div class="col-md-2 " >
+                    <mat-card class="example-card">
+                        <img class="card-img-top img-responsive"
+                            src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                            style = "height :100px;width:fil-content"
+                           alt="">
+                    </mat-card>
+                
+                </div>
+        
+               
+            </div>
+
+ </div>
+ <h2>Press</h2>
+ <div *ngFor="let item of crudApi.press"> 
+            <div class="row rows">
+                <div class="col-md-2 " >
+                    <mat-card class="example-card">
+                        <img class="card-img-top img-responsive"
+                            src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                            style = "height :100px;width:fil-content"
+                           alt="">
+                    </mat-card>
+                
+                </div>
+        
+               
+            </div>
+
+ </div>
+
+
 
 </div>
 
