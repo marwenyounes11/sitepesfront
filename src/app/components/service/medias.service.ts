@@ -14,6 +14,7 @@ export class MediasService {
   listData : Medias[];
   ctp : Medias[];
   coach: Medias[];
+  videos: Medias[];
  evenement : Medias[];
   atelier : Medias[];
   press : Medias[];
@@ -37,6 +38,10 @@ export class MediasService {
   deleteData(id: number): Observable<any> {
    
     return this.http.delete('http://localhost:8085/api/medias/${id}', { responseType: 'text' });
+  }
+  getMediasVideos(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/mediasvideos');
   }
   getMediasCoach(): Observable<any> {
    
@@ -66,9 +71,11 @@ export class MediasService {
 
  
 
-  uploadFile(file: File): Observable<HttpEvent<{}>> {
+ 
+  uploadFile(file1: File,file2: File): Observable<HttpEvent<{}>> {
 		const formdata: FormData = new FormData();
-		formdata.append('file', file);
+        formdata.append('file1', file1);
+        formdata.append('file2', file2);
 		const req = new HttpRequest('POST', '<Server URL of the file upload>', formdata, {
 			  reportProgress: true,
 			  responseType: 'text'

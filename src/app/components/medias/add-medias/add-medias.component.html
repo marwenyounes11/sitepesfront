@@ -44,10 +44,16 @@
       </mat-form-field>
      <br>
     <div class="form-group">
-      <label>File Upload  </label> <br>
-          <input type="file" accept="image/*" (change)="onSelectFile($event)"> <br>
-          <img  [src]="imgURL" height="200" *ngIf="imgURL">
-    </div>       
+      <label>Ajouter Image  </label> <br>
+          <input type="file" accept="image/*" (change)="onSelectFile1($event)"> <br>
+          <img  [src]="imgURL1" height="200" *ngIf="imgURL1">
+    </div>   
+    
+    <div class="form-group">
+      <label>Ajouter Video </label> <br>
+          <input type="file" accept="video/*" (change)="onSelectFile2($event)"> <br>
+          
+    </div>  
     </mat-card-content>
     <br>
     <br>
