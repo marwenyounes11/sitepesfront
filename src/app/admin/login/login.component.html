@@ -1,10 +1,16 @@
 <body class="bg-gradient-primary">
     <div class="container">
-    <div class="row justify-content-center">
+      <div class="show-login-btn" (click)="toggle1()">
+        <i class="fas fa-sign-in-alt"> afficher le formulaire de login</i>
+      </div>
+    <div class="row justify-content-center ">
     <div class="col-xl-8 col-lg-10 col-md-7">
     <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">
-    <div class="row">
+    <div class="row "  [@ngIfAnimation] *ngIf="show1">
+      <div class="hide-login-btn" (click)="toggle2()" >
+        <i class="fas fa-times"></i>
+      </div>
     <div class="col-lg-4 log">
       <img src="../../../assets/images/login8.jpg" class="img-circle " alt="User Image">
     </div>
@@ -13,7 +19,8 @@
     <div class="text-center">
       <h1 class="h4 text-gray-900 mb-4">Connection</h1>
     </div>
-    <form class="user">
+    <form class="user" @easeInOut>
+      
       <div class="input-group mb-3">  
        <div class="input-group-prepend">  
         <span class="input-group-text"><i class="icon-user"></i></span>  

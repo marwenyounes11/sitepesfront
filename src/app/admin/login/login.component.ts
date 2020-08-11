@@ -4,12 +4,49 @@ import { AdminService} from '../../components/service/admin.service';
 import { Router } from '@angular/router';
 
 import { DatePipe } from '@angular/common';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  query,
+  animateChild
+} from '@angular/animations';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [
+    trigger('ngIfAnimation', [
+      transition(':enter, :leave', [
+        query('@*', animateChild(),{ optional: true })
+      ])
+    ]),
+    trigger('easeInOut', [
+      transition('void => *', [
+          style({
+              opacity: 0
+          }),
+          animate("500ms ease-in", style({
+              opacity: 1
+          }))
+      ]),
+      transition('* => void', [
+          style({
+              opacity: 1
+          }),
+          animate("500ms ease-in", style({
+              opacity: 0
+          }))
+        ])
+      ])
+  ]
 })
 export class LoginComponent implements OnInit {
+  show1:boolean = false;
+  show2:boolean = false;
   user: any={};
   loginname : String;
   password : String;
@@ -71,5 +108,11 @@ export class LoginComponent implements OnInit {
     logout() {
      
       localStorage.removeItem('name');
+  }
+  toggle1() {
+    this.show1 = !this.show1;
+  }
+  toggle2() {
+    this.show1 = !this.show1;
   }
 }
