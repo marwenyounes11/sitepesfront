@@ -1,4 +1,5 @@
 import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes} from '@angular/router';
@@ -53,7 +54,7 @@ import { VideosComponent } from './components/videos/videos.component';
 import { ArticleComponent } from './components/article/article/article.component';
 import { AddArticleComponent } from './components/article/add-article/add-article.component';
 import { ListArticleComponent } from './components/article/list-article/list-article.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { OffresComponent } from './components/offres/offres.component';
 import { PostuleComponent } from './components/postule/postule.component';
 import { AddCandidatureComponent } from './components/add-candidature/add-candidature.component';
