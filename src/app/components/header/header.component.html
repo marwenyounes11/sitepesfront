@@ -32,61 +32,61 @@
     <div class="col-md-12">
             <nav mat-tab-nav-bar>
                 <a mat-tab-link
-                 routerLink="/acceuil" class="tablink w3-blanc " (click)=" openTab()" >
+                 routerLink="/acceuil" class="tablink w3-blanc "  >
                  Acceuil
                </a>
                <a mat-tab-link
-                 [matMenuTriggerFor] = "pr" class="tablink w3-blanc" routerLink="/presentation" (click)="openTab()">
+                 [matMenuTriggerFor] = "pr" class="tablink w3-blanc" routerLink="/presentation" >
                  Presentation
                </a>
                <mat-menu #pr ='matMenu'>
-                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/souspresentation" (click)="openTab()">Qui sommes nous</a>
-                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/prospectus" (click)="openTab()">Prospectus</a>
-                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/emplacement" (click)="openTab()">Emplacement</a>
+                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/souspresentation" >Qui sommes nous</a>
+                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/prospectus" >Prospectus</a>
+                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/emplacement" >Emplacement</a>
               </mat-menu>
               <a mat-tab-link
-                 [matMenuTriggerFor] = "m1" routerLink="/nosee" class="tablink w3-blanc" (click)="openTab()">
+                 [matMenuTriggerFor] = "m1" routerLink="/nosee" class="tablink w3-blanc" >
                  Nos EE
                </a>
                <mat-menu #m1 ="matMenu">
-                <a mat-menu-item [matMenuTriggerFor] = "elan" routerLink="/nosee/elan" class="tablink w3-blanc" (click)="openTab()">ELAN</a>
-                <a mat-menu-item [matMenuTriggerFor] = "pes" routerLink="/nosee/pes"  class="tablink w3-blanc" (click)="openTab()">PES</a>
+                <a mat-menu-item [matMenuTriggerFor] = "elan" routerLink="/nosee/elan" class="tablink w3-blanc" >ELAN</a>
+                <a mat-menu-item [matMenuTriggerFor] = "pes" routerLink="/nosee/pes"  class="tablink w3-blanc" >PES</a>
               </mat-menu>
               <mat-menu #elan ="matMenu">
-                <a mat-menu-item routerLink="/nosee/elan/finance" class="tablink w3-blanc" (click)="openTab()">Finance</a>
-                <a mat-menu-item routerLink="/nosee/elan/rh" class="tablink w3-blanc" (click)="openTab()">RH</a>
-                <a mat-menu-item routerLink="/nosee/elan/comptabilite" class="tablink w3-blanc" (click)="openTab()">Comptabilité</a>
-                <a mat-menu-item routerLink="/nosee/elan/commerce" class="tablink w3-blanc" (click)="openTab()">Commerce</a>
+                <a mat-menu-item routerLink="/nosee/elan/finance" class="tablink w3-blanc" >Finance</a>
+                <a mat-menu-item routerLink="/nosee/elan/rh" class="tablink w3-blanc" >RH</a>
+                <a mat-menu-item routerLink="/nosee/elan/comptabilite" class="tablink w3-blanc" >Comptabilité</a>
+                <a mat-menu-item routerLink="/nosee/elan/commerce" class="tablink w3-blanc" >Commerce</a>
              </mat-menu>
              <mat-menu #pes ="matMenu">
-                <a mat-menu-item routerLink="/nosee/pes/marketing" class="tablink  w3-blanc" (click)="openTab()">Marketing</a>
-                <a mat-menu-item routerLink="/nosee/pes/developpement" class="tablink  w3-blanc" (click)="openTab()">Developpement</a>
-                <a mat-menu-item routerLink="/nosee/pes/design"  class="tablink  w3-blanc" (click)="openTab()">Design</a>
+                <a mat-menu-item routerLink="/nosee/pes/marketing" class="tablink  w3-blanc" >Marketing</a>
+                <a mat-menu-item routerLink="/nosee/pes/developpement" class="tablink  w3-blanc" >Developpement</a>
+                <a mat-menu-item routerLink="/nosee/pes/design"  class="tablink  w3-blanc" >Design</a>
              </mat-menu>
              <a mat-tab-link
-             routerLink="/partenariats" class="tablink  w3-blanc" (click)="openTab()">
+             routerLink="/partenariats" class="tablink  w3-blanc" >
              partenariats
              </a>
              <a mat-tab-link
-             routerLink="/actualites"  (click)="scroll('target')" class="tablink  w3-blanc" (click)="openTab()">
+             routerLink="/actualites"  (click)="scroll('target')" class="tablink  w3-blanc">
              Actualités
              </a>
              <a mat-tab-link
-             [matMenuTriggerFor] = "media" routerLink="/medias" class="tablink  w3-blanc" (click)="openTab()">Médias
+             [matMenuTriggerFor] = "media" routerLink="/medias" class="tablink  w3-blanc" >Médias
            </a>
            <mat-menu #media ="matMenu">
-            <a mat-menu-item routerLink="/medias/photos" class="tablink  w3-blanc" (click)="openTab()">Galeries photos</a>
-            <a mat-menu-item routerLink="/medias/press" class="tablink  w3-blanc" (click)="openTab()">Presse</a>
-            <a mat-menu-item routerLink="/medias/videos" class="tablink  w3-blanc" (click)="openTab()">vidéos</a>
+            <a mat-menu-item routerLink="/medias/photos" class="tablink  w3-blanc" >Galeries photos</a>
+            <a mat-menu-item routerLink="/medias/press" class="tablink  w3-blanc" >Presse</a>
+            <a mat-menu-item routerLink="/medias/videos" class="tablink  w3-blanc" >vidéos</a>
            </mat-menu>
            <a mat-tab-link
-           [matMenuTriggerFor]  = "candidat" routerLink="/candidature" class="tablink  w3-blanc" (click)="openTab()">Candidatures</a>
+           [matMenuTriggerFor]  = "candidat" routerLink="/candidature" class="tablink  w3-blanc">Candidatures</a>
            <mat-menu #candidat ="matMenu">
-            <a mat-menu-item routerLink="/candidature/offre" class="tablink  w3-blanc" (click)="openTab()">offre d'emploi</a>
-            <a mat-menu-item routerLink="/candidature/postules" class="tablink  w3-blanc" (click)="openTab()">postuler pour offre</a>
+            <a mat-menu-item routerLink="/candidature/offre" class="tablink  w3-blanc" >offre d'emploi</a>
+            <a mat-menu-item routerLink="/candidature/postules" class="tablink  w3-blanc" >postuler pour offre</a>
            </mat-menu>
            <a mat-tab-link
-             routerLink="/contact" class="tablink w3-blanc" (click)=" openTab()">
+             routerLink="/contact" class="tablink w3-blanc" >
              Contact
              </a>
             </nav>

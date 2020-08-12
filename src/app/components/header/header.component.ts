@@ -16,14 +16,6 @@ export class HeaderComponent implements OnInit {
   scroll(id) {
     this.vps.scrollToAnchor(id);
   }
-  openTab() {
-    /**  var i, x, tablinks;
-    
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace("w3-blanc", " w3-red");
-    }
-    */
-  }
+  
   
 }

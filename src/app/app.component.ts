@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 import {
   trigger,
   state,
@@ -30,7 +31,9 @@ export class AppComponent {
   animateMe(){
     this.state=(this.state==='small'?'large':'small');
   }
-  constructor(private router:Router) { }    
+
+  
+  constructor(private router:Router,private vps: ViewportScroller) { }    
   ngOnInit() {    
  
   }    
