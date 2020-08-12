@@ -1,4 +1,11 @@
 import { Component, OnInit ,Inject} from '@angular/core';
+import {
+  state,
+  style,
+  transition,
+  animate,
+  trigger
+} from "@angular/animations";
 import { ArticleService} from '../../service/article.service';
 import { ToastrService } from 'ngx-toastr';
 import { Article} from '../../model/article';
@@ -14,9 +21,23 @@ import { AddArticleComponent } from '../../article/add-article/add-article.compo
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css'],
+  animations: [
+    trigger("flyInOut", [
+      state("in", style({ transform: "translateX(0)" })),
+      transition("void => *", [
+        style({ transform: "translateX(-100%)" }),
+        animate(100)
+      ]),
+      transition("* => void", [
+        animate(100, style({ transform: "translateX(100%)" }))
+      ])
+    ])
+  ]
+
 })
 export class ArticleComponent implements OnInit {
+  show:boolean = true;
   article : Article;
   dernier:Boolean =false;
   control: FormControl = new FormControl('');
@@ -84,4 +105,11 @@ export class ArticleComponent implements OnInit {
     
     this.matDialog.open(AddArticleComponent, dialogConfig);
   }
+
+
+  
+
+
+
+  
 }

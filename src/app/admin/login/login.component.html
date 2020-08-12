@@ -1,16 +1,14 @@
 <body class="bg-gradient-primary">
     <div class="container">
       <div class="show-login-btn" (click)="toggle1()">
-        <i class="fas fa-sign-in-alt"> afficher le formulaire de login</i>
+        <i class="fas fa-eye"> afficher/fermer la formulaire de login</i>
       </div>
     <div class="row justify-content-center ">
     <div class="col-xl-8 col-lg-10 col-md-7">
     <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">
-    <div class="row "  [@ngIfAnimation] *ngIf="show1">
-      <div class="hide-login-btn" (click)="toggle2()" >
-        <i class="fas fa-times"></i>
-      </div>
+    <div class="row "  [@ngIfAnimation] *ngIf="show1" [@toggleanimation]='state'>
+     
     <div class="col-lg-4 log">
       <img src="../../../assets/images/login8.jpg" class="img-circle " alt="User Image">
     </div>

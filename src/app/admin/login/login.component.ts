@@ -11,7 +11,8 @@ import {
   animate,
   transition,
   query,
-  animateChild
+  animateChild,
+  keyframes
 } from '@angular/animations';
 
 @Component({
@@ -41,12 +42,22 @@ import {
               opacity: 0
           }))
         ])
-      ])
+      ]),
+      trigger('toggleanimation', [
+        state('small', style({
+          height: '0px'
+        })),
+        state('large', style({
+          height: '100px'
+        })),
+        transition('small <=> large', animate('400ms ease-in' )),
+      ]),
   ]
 })
 export class LoginComponent implements OnInit {
+  state:string ='small';
   show1:boolean = false;
-  show2:boolean = false;
+ 
   user: any={};
   loginname : String;
   password : String;
@@ -112,7 +123,11 @@ export class LoginComponent implements OnInit {
   toggle1() {
     this.show1 = !this.show1;
   }
-  toggle2() {
-    this.show1 = !this.show1;
+ 
+  
+  animateMe(){
+    this.state=(this.state==='small'?'large':'small');
   }
+
+
 }

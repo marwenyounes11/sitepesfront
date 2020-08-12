@@ -10,7 +10,12 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+  onActivate(event){
+   window.scroll(0,0);   
+  }
+
   scrollToElement(el): void {
     this.myScrollContainer.nativeElement.scroll({
       top: this.myScrollContainer.nativeElement.scrollHeight,
