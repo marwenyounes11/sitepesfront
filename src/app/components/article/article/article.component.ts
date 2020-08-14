@@ -1,4 +1,5 @@
-import { Component, OnInit ,Inject} from '@angular/core';
+import { Component ,ViewChild ,OnInit ,Inject} from '@angular/core';
+import {SlickCarouselComponent} from 'ngx-slick-carousel';
 import {
   state,
   style,
@@ -37,6 +38,13 @@ import { AddArticleComponent } from '../../article/add-article/add-article.compo
 
 })
 export class ArticleComponent implements OnInit {
+  slideConfig = {"slidesToShow": 2, "slidesToScroll": 1,"nextArrow": "<div class='nav-btn next-slide'></div>",
+  "prevArrow": "<div class='nav-btn prev-slide'></div>",
+  "dots": true,
+  "infinite": false};
+  @ViewChild('slickModal')
+	slickModal: SlickCarouselComponent;
+ 
   show:boolean = true;
   article : Article;
   dernier:Boolean =false;
@@ -106,10 +114,25 @@ export class ArticleComponent implements OnInit {
     this.matDialog.open(AddArticleComponent, dialogConfig);
   }
 
+  carouselConfig = {
+		infinite: true, centerMode: true, variableWidth: true
+	};
+  slickInit(e) {
+    console.log('slick initialized');
+  }
+  
+  breakpoint(e) {
+    console.log('breakpoint');
+  }
+  
+  afterChange(e) {
+    console.log('afterChange');
+  }
+  
+  beforeChange(e) {
+    console.log('beforeChange');
+  }
 
   
-
-
-
   
 }

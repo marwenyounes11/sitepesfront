@@ -1,5 +1,6 @@
 import { BrowserModule  } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes} from '@angular/router';
@@ -165,6 +166,7 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
+    SlickCarouselModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,

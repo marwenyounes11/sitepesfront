@@ -3,7 +3,14 @@
 mat-card-content{
     text-align:center;
 }
-
+mat-card{
+   width:200px;
+   
+   
+}
 .corp{
     overflow: auto;
+}
+ngx-slick-carousel{
+    width:200px;
 }
