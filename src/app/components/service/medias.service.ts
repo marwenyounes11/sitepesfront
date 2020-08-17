@@ -24,7 +24,7 @@ export class MediasService {
   
 
   getData(id: number): Observable<Object> {
-    return this.http.get('http://localhost:8085/api/medias/${id}');
+    return this.http.get(`http://localhost:8085/api/medias/${id}`);
   }
  
   createData(formData: FormData): Observable<any> {
@@ -32,12 +32,12 @@ export class MediasService {
   }
   
   updatedata(id: number, value: any): Observable<Object> {
-    return this.http.put('http://localhost:8085/api/medias/${id}', value);
+    return this.http.put(`http://localhost:8085/api/medias/${id}`, value);
   }
  
   deleteData(id: number): Observable<any> {
    
-    return this.http.delete('http://localhost:8085/api/medias/${id}', { responseType: 'text' });
+    return this.http.delete(`http://localhost:8085/api/medias/${id}`, { responseType: 'text' });
   }
   getMediasVideos(): Observable<any> {
    

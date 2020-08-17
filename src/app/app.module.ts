@@ -68,6 +68,9 @@ import { AddMediasComponent } from './components/medias/add-medias/add-medias.co
 import {MediasComponent } from './components/medias/medias/medias.component';
 import { AuthGuardService } from './admin/auth/auth-guard.service';
 import { MenuComponent } from './menu/menu.component';
+import { DetailArticleComponent } from './components/article/detail-article/detail-article.component';
+import { RessourcesComponent } from './components/ressources/ressources.component';
+import { AddRessourceComponent } from './components/add-ressource/add-ressource.component';
 
 
 const appRoutes : Routes = [
@@ -110,6 +113,7 @@ const appRoutes : Routes = [
  ]},
   {path: 'partenariats', component: ParetenariatsComponent},
   {path: 'actualites', redirectTo:'acceuil#page'},
+  { path: 'detailarticle/:id', component: DetailArticleComponent },
   {path: 'medias', children: [
     { path: 'photos', component: PhotosComponent },
     { path: 'press', component: PressComponent },
@@ -162,7 +166,10 @@ const appRoutes : Routes = [
     AdminComponent,
     CandidatureresponseComponent,
     PressComponent,
-    MenuComponent
+    MenuComponent,
+    DetailArticleComponent,
+    RessourcesComponent,
+    AddRessourceComponent
   ],
   imports: [
     BrowserModule,

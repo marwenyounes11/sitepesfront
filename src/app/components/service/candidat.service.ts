@@ -16,7 +16,7 @@ export class CandidatService {
    
    
     getData(id: number): Observable<Object> {
-      return this.http.get('http://localhost:8085/api/candidats/${id}');
+      return this.http.get(`http://localhost:8085/api/candidats/${id}`);
     }
    
     createData(info: Object): Observable<Object> {
@@ -24,12 +24,12 @@ export class CandidatService {
     }
     
     updatedata(id: number, value: any): Observable<Object> {
-      return this.http.put('http://localhost:8085/api/candidats/${id}', value);
+      return this.http.put(`http://localhost:8085/api/candidats/${id}`, value);
     }
    
     deleteData(id: number): Observable<any> {
      
-      return this.http.delete('http://localhost:8085/api/candidats/${id}', { responseType: 'text' });
+      return this.http.delete(`http://localhost:8085/api/candidats/${id}`, { responseType: 'text' });
     }
   
     getAll(): Observable<any> {

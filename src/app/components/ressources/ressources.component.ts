@@ -7,9 +7,9 @@ import {
   animate,
   trigger
 } from "@angular/animations";
-import { ArticleService} from '../service/article.service';
+import { RessourcesService} from '../service/Ressources.service';
 import { ToastrService } from 'ngx-toastr';
-import { Article} from '../model/article';
+import { Ressource} from '../model/ressource';
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
@@ -17,36 +17,30 @@ import {MatDialog, MatDialogConfig, MAT_DIALOG_DATA,MatDialogRef } from '@angula
 
 import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule,Validators }
 from '@angular/forms';
-import { AddArticleComponent } from '../article/add-article/add-article.component';
-
+import { AddRessourceComponent } from '../add-ressource/add-ressource.component';
 
 @Component({
-  selector: 'app-actualites',
-  templateUrl: './actualites.component.html',
-  styleUrls: ['./actualites.component.css']
+  selector: 'app-ressources',
+  templateUrl: './ressources.component.html',
+  styleUrls: ['./ressources.component.css']
 })
-export class ActualitesComponent implements OnInit {
+export class RessourcesComponent implements OnInit {
 
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1,"nextArrow": "<div class='nav-btn next-slide'></div>",
-  "prevArrow": "<div class='nav-btn prev-slide'></div>",
-  "dots": true,
-  "infinite": false};
-  @ViewChild('slickModal')
-	slickModal: SlickCarouselComponent;
+ 
  
   show:boolean = true;
-  article : Article;
+  ressource : Ressource;
   dernier:Boolean =false;
   control: FormControl = new FormControl('');
-  constructor(public crudApi: ArticleService, public toastr: ToastrService,
+  constructor(public crudApi: RessourcesService, public toastr: ToastrService,
     private router : Router,public fb: FormBuilder,
     private matDialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialogRef:MatDialogRef<AddArticleComponent>,) { }
+    public dialogRef:MatDialogRef<AddRessourceComponent>,) { }
  
   ngOnInit() {
     
-      this.getLast();
+     
       this.getData();
    
     
@@ -59,7 +53,7 @@ export class ActualitesComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     
-    this.matDialog.open(AddArticleComponent, dialogConfig);
+    this.matDialog.open(AddRessourceComponent, dialogConfig);
   }
  
   
@@ -72,16 +66,11 @@ export class ActualitesComponent implements OnInit {
    
   }
 
-  getLast() {
-    this.crudApi.getLast().subscribe(
-      response =>{this.crudApi.lastData = response;}
-     );
-   
-  }
+  
   
  
   removeData(id: number) {
-    if (window.confirm('Are sure you want to delete this Article ?')) {
+    if (window.confirm('Are sure you want to delete this Ressource ?')) {
     this.crudApi.deleteData(id)
       .subscribe(
         data => {
@@ -92,7 +81,7 @@ export class ActualitesComponent implements OnInit {
         error => console.log(error));
   }
   }
-  selectData(item : Article) {
+  selectData(item : Ressource) {
     this.crudApi.choixmenu = "M";
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
     const dialogConfig = new MatDialogConfig();
@@ -100,27 +89,9 @@ export class ActualitesComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     
-    this.matDialog.open(AddArticleComponent, dialogConfig);
+    this.matDialog.open(AddRessourceComponent, dialogConfig);
   }
 
-  carouselConfig = {
-		infinite: true, centerMode: true, variableWidth: true
-	};
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-  
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-  
-  afterChange(e) {
-    console.log('afterChange');
-  }
-  
-  beforeChange(e) {
-    console.log('beforeChange');
-  }
-
+ 
 
 }

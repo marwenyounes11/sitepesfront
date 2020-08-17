@@ -17,7 +17,7 @@ export class OffreService {
    
    
     getData(id: number): Observable<Object> {
-      return this.http.get('http://localhost:8085/api/offres/${id}');
+      return this.http.get(`http://localhost:8085/api/offres/${id}`);
     }
    
     createData(info: Object): Observable<Object> {
@@ -25,12 +25,12 @@ export class OffreService {
     }
     
     updatedata(id: number, value: any): Observable<Object> {
-      return this.http.put('http://localhost:8085/api/offres/${id}', value);
+      return this.http.put(`http://localhost:8085/api/offres/${id}`, value);
     }
    
     deleteData(id: number): Observable<any> {
      
-      return this.http.delete('http://localhost:8085/api/offres/${id}', { responseType: 'text' });
+      return this.http.delete(`http://localhost:8085/api/offres/${id}`, { responseType: 'text' });
     }
   
     getAll(): Observable<any> {

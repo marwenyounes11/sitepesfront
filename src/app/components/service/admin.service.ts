@@ -30,7 +30,7 @@ export class AdminService {
   }  
  
   getData(id: number): Observable<Object> {
-    return this.http.get('http://localhost:8085/api/users/${id}');
+    return this.http.get(`http://localhost:8085/api/users/${id}`);
   }
  
   createData(info: Object): Observable<Object> {
@@ -38,12 +38,12 @@ export class AdminService {
   }
   
   updatedata(id: number, value: any): Observable<Object> {
-    return this.http.put('http://localhost:8085/api/users/${id}', value);
+    return this.http.put(`http://localhost:8085/api/users/${id}`, value);
   }
  
   deleteData(id: number): Observable<any> {
    
-    return this.http.delete('http://localhost:8085/api/users/${id}', { responseType: 'text' });
+    return this.http.delete(`http://localhost:8085/api/users/${id}`, { responseType: 'text' });
   }
 
   getAll(): Observable<any> {
@@ -51,6 +51,6 @@ export class AdminService {
     return this.http.get('http://localhost:8085/api/users');
   }
   transformDate(date){
-    return this.datePipe.transform(date, 'yyyy-MM-dd');
+    return this.datePipe.transform(date, 'dd-MM-yyyy');
   }
 }
