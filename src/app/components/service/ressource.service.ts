@@ -8,9 +8,10 @@ from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
-export class RessourcesService {
+export class RessourceService {
 
   host :string = "http://localhost:8085";
+  
   choixmenu : string  = 'A';
   listData : Ressource[];
   public dataForm:  FormGroup; 
@@ -40,7 +41,20 @@ export class RessourcesService {
     return this.http.get('http://localhost:8085/api/ressources');
   }
 
-  
+  getRessourceCoach(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/ressourcecoach');
+  }
+
+  getRessourceCtp(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/ressourcectp');
+  }
+
+  getRessourceManager(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/ressourcemanager');
+  }
 
   uploadFile(file: File): Observable<HttpEvent<{}>> {
 		const formdata: FormData = new FormData();

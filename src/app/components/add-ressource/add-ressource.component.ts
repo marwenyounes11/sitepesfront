@@ -1,5 +1,5 @@
 import { Component, OnInit,Inject } from '@angular/core';
-import { RessourcesService} from '../service/ressources.service';
+import { RessourceService} from '../service/ressource.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule,Validators }
 from '@angular/forms';
@@ -20,7 +20,7 @@ export class AddRessourceComponent implements OnInit {
   public imagePath;
   imgURL: any;
   public message: string;
-  constructor(public crudApi: RessourcesService ,public fb: FormBuilder,public toastr: ToastrService, private router : Router ,@Inject(MAT_DIALOG_DATA)  public data,
+  constructor(public crudApi: RessourceService ,public fb: FormBuilder,public toastr: ToastrService, private router : Router ,@Inject(MAT_DIALOG_DATA)  public data,
   public dialogRef:MatDialogRef<AddRessourceComponent>) { }
   get f() { return this.crudApi.dataForm.controls; }
   ngOnInit(): void {

@@ -72,7 +72,12 @@
              Actualités
              </a>
              <a mat-tab-link
-             [matMenuTriggerFor] = "media" routerLink="/medias" class="tablink  w3-blanc" >Médias
+             routerLink="/ressource" class="tablink  w3-blanc" >
+             Ressources
+             </a>
+             <a mat-tab-link
+             [matMenuTriggerFor] = "media" routerLink="/medias" class="tablink  w3-blanc" >
+             Médias
            </a>
            <mat-menu #media ="matMenu">
             <a mat-menu-item routerLink="/medias/photos" class="tablink  w3-blanc" >Galeries photos</a>

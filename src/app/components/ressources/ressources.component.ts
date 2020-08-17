@@ -7,7 +7,7 @@ import {
   animate,
   trigger
 } from "@angular/animations";
-import { RessourcesService} from '../service/Ressources.service';
+import { RessourceService} from '../service/ressource.service';
 import { ToastrService } from 'ngx-toastr';
 import { Ressource} from '../model/ressource';
 import { Observable } from "rxjs";
@@ -32,18 +32,14 @@ export class RessourcesComponent implements OnInit {
   ressource : Ressource;
   dernier:Boolean =false;
   control: FormControl = new FormControl('');
-  constructor(public crudApi: RessourcesService, public toastr: ToastrService,
+  constructor(public crudApi: RessourceService, public toastr: ToastrService,
     private router : Router,public fb: FormBuilder,
     private matDialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef:MatDialogRef<AddRessourceComponent>,) { }
  
   ngOnInit() {
-    
-     
-      this.getData();
-   
-    
+    this.getData();
   }
   addarticle()
   {

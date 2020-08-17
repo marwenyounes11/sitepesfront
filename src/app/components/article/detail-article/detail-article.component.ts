@@ -10,7 +10,7 @@ import { Article} from '../../model/article';
   styleUrls: ['./detail-article.component.css']
 })
 export class DetailArticleComponent implements OnInit {
-
+  host :string = "http://localhost:8085";
   errorMessage = '';
   article: Article | undefined;
 

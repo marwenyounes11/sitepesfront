@@ -1,12 +1,13 @@
 <h1 *ngIf="article">{{article.titre}}</h1>
 
-<mat-card class="example-card">
+<mat-card  class="example-card">
     <img class="card-img-top img-responsive"
-        src = "{{this.crudApi.host+'/api/Imgarticles/'+article.id}}" 
+        src = "{{host+'/api/Imgarticles/'+article.id}}" 
         style = "height :150px;width:150px"
-       alt="">
+       alt="{{article.titre}}">
       
     <mat-card-content>
+        
         <p>{{article.titre}}</p>
         <p><b> {{article.auteur}} </b></p>
         <p> {{article.date}}  </p>

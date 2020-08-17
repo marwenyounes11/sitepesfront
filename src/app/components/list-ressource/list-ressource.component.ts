@@ -1,7 +1,7 @@
 import { Component, OnInit ,Inject} from '@angular/core';
-import { MediasService} from '../../service/medias.service';
+import { RessourceService} from '../service/ressource.service';
 import { ToastrService } from 'ngx-toastr';
-import { Medias} from '../../model/medias';
+import { Ressource} from '../model/Ressource';
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
@@ -9,28 +9,32 @@ import {MatDialog, MatDialogConfig, MAT_DIALOG_DATA,MatDialogRef } from '@angula
 
 import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule,Validators }
 from '@angular/forms';
-import { AddMediasComponent } from '../../medias/add-medias/add-medias.component';
+import { AddRessourceComponent } from '../add-ressource/add-ressource.component';
 
 @Component({
-  selector: 'app-medias',
-  templateUrl: './medias.component.html',
-  styleUrls: ['./medias.component.css']
+  selector: 'app-list-ressource',
+  templateUrl: './list-ressource.component.html',
+  styleUrls: ['./list-ressource.component.css']
 })
-export class MediasComponent implements OnInit {
- 
-  medias : Medias;
+export class ListRessourceComponent implements OnInit {
+  ressource : Ressource;
+  ctp : Ressource[];
+  coach: Ressource[];
+  manager: Ressource[];
   dernier:Boolean =false;
   control: FormControl = new FormControl('');
-  constructor(public crudApi: MediasService, public toastr: ToastrService,
+  constructor(public crudApi: RessourceService, public toastr: ToastrService,
     private router : Router,public fb: FormBuilder,
     private matDialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialogRef:MatDialogRef<AddMediasComponent>,) { }
+    public dialogRef:MatDialogRef<AddRessourceComponent>,) { }
  
   ngOnInit() {
     
      
       this.getData();
+      this.getCoach();
+      this.getCtp();
    
     
   }
@@ -42,7 +46,7 @@ export class MediasComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     
-    this.matDialog.open(AddMediasComponent, dialogConfig);
+    this.matDialog.open(AddRessourceComponent, dialogConfig);
   }
  
   
@@ -55,10 +59,30 @@ export class MediasComponent implements OnInit {
    
   }
 
+  getCoach() {
+    this.crudApi.getRessourceCoach().subscribe(
+      response =>{this.coach = response;}
+     );
+   
+  }
  
+  getCtp() {
+    this.crudApi.getRessourceCtp().subscribe(
+      response =>{this.ctp = response;}
+     );
+   
+  }
+
+  getManager() {
+    this.crudApi.getRessourceManager().subscribe(
+      response =>{this.ctp = response;}
+     );
+   
+  }
+  
  
   removeData(id: number) {
-    if (window.confirm('Are sure you want to delete this Medias ?')) {
+    if (window.confirm('Are sure you want to delete this Ressource ?')) {
     this.crudApi.deleteData(id)
       .subscribe(
         data => {
@@ -69,13 +93,15 @@ export class MediasComponent implements OnInit {
         error => console.log(error));
   }
   }
-  selectData(item : Medias) {
+  selectData(item : Ressource) {
     this.crudApi.choixmenu = "M";
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
-    this.matDialog.open(AddMediasComponent, dialogConfig);
+    
+    this.matDialog.open(AddRessourceComponent, dialogConfig);
   }
+
 }

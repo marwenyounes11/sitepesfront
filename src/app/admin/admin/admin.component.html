@@ -37,7 +37,11 @@
         <a mat-menu-item routerLink="/admin/lmedias">List Medias</a>
         <a mat-menu-item routerLink="/admin/medias">Add Medias</a>
       </mat-menu>
-
+      <a mat-list-item [matMenuTriggerFor] = "m4"  >  <span>Gestion Ressources</span> </a>
+      <mat-menu #m4 = "matMenu">
+       <a mat-menu-item routerLink="/admin/lressource">List Medias</a>
+       <a mat-menu-item routerLink="/admin/addressource">Add Medias</a>
+     </mat-menu>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

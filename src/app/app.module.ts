@@ -71,6 +71,7 @@ import { MenuComponent } from './menu/menu.component';
 import { DetailArticleComponent } from './components/article/detail-article/detail-article.component';
 import { RessourcesComponent } from './components/ressources/ressources.component';
 import { AddRessourceComponent } from './components/add-ressource/add-ressource.component';
+import { ListRessourceComponent } from './components/list-ressource/list-ressource.component';
 
 
 const appRoutes : Routes = [
@@ -85,6 +86,8 @@ const appRoutes : Routes = [
   {path: 'article', component: AddArticleComponent},
   {path: 'lmedias', component: MediasComponent},
   {path: 'medias', component: AddMediasComponent},
+  {path: 'lressource', component: RessourcesComponent},
+  {path: 'addressource', component: AddRessourceComponent},
   {path: 'addoffre', component: AddOffreComponent},
   { path: 'offres', component: OffresComponent },
  ]},
@@ -114,6 +117,7 @@ const appRoutes : Routes = [
   {path: 'partenariats', component: ParetenariatsComponent},
   {path: 'actualites', redirectTo:'acceuil#page'},
   { path: 'detailarticle/:id', component: DetailArticleComponent },
+  {path: 'ressource', component: ListRessourceComponent},
   {path: 'medias', children: [
     { path: 'photos', component: PhotosComponent },
     { path: 'press', component: PressComponent },
@@ -169,7 +173,8 @@ const appRoutes : Routes = [
     MenuComponent,
     DetailArticleComponent,
     RessourcesComponent,
-    AddRessourceComponent
+    AddRessourceComponent,
+    ListRessourceComponent
   ],
   imports: [
     BrowserModule,

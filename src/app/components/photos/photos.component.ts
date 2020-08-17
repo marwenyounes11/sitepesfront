@@ -31,7 +31,7 @@ export class PhotosComponent implements OnInit {
     
      
       this.getData();
-      this.getCoach();
+    
    
     
   }
@@ -56,19 +56,6 @@ export class PhotosComponent implements OnInit {
    
   }
 
-  getCoach() {
-    this.crudApi.getMediasCoach().subscribe(
-      response =>{this.crudApi.coach = response;}
-     );
-   
-  }
- 
-  getCtp() {
-    this.crudApi.getMediasCtp().subscribe(
-      response =>{this.crudApi.ctp = response;}
-     );
-   
-  }
   getEvenement() {
     this.crudApi.getMediasEvenement().subscribe(
       response =>{this.crudApi.evenement = response;}

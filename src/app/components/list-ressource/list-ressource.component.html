@@ -1,0 +1,69 @@
+<h2>Liste Collaborateurs temporaires en perfectionnement </h2>
+<div class="row">
+     <div class="col-md-12 center" >
+   <div *ngFor="let item of ctp">
+     <div class="col-md-2" >
+              <mat-card class="example-card">
+             <img class="card-img-top img-responsive"
+                 src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
+                 style = "height :fil-content;width:fil-content"
+                alt="">
+                <mat-card-content>
+                    <p>{{item.nom}}</p>
+                    <p>{{item.prenom}}</p>
+                    <p>{{item.type}}</p>
+                </mat-card-content>
+               </mat-card>
+     </div>
+     </div>
+ </div>
+ 
+</div>
+
+<h2>Liste Coach </h2>
+<div class="row">
+    <div class="col-md-12 center" >
+  <div *ngFor="let item of coach">
+    <div class="col-md-2" >
+             <mat-card class="example-card">
+            <img class="card-img-top img-responsive"
+                src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
+                style = "height :fil-content;width:fil-content"
+               alt="">
+               <mat-card-content>
+                <p>{{item.nom}}</p>
+                <p>{{item.prenom}}</p>
+                <p>{{item.type}}</p>
+            </mat-card-content>
+              </mat-card>
+    </div>
+    </div>
+</div>
+
+</div>
+
+<h2>Manager </h2>
+<div class="row">
+    <div class="col-md-12 center" >
+  <div *ngFor="let item of manager">
+    <div class="col-md-2" >
+             <mat-card class="example-card">
+            <img class="card-img-top img-responsive"
+                src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
+                style = "height :fil-content;width:fil-content"
+               alt="">
+               <mat-card-content>
+                <p>{{item.nom}}</p>
+                <p>{{item.prenom}}</p>
+                <p>{{item.type}}</p>
+            </mat-card-content>
+              </mat-card>
+    </div>
+    </div>
+</div>
+
+</div>
+
+
+
+

@@ -12,8 +12,6 @@ export class MediasService {
   host :string = "http://localhost:8085";
   choixmenu : string  = 'A';
   listData : Medias[];
-  ctp : Medias[];
-  coach: Medias[];
   videos: Medias[];
  evenement : Medias[];
   atelier : Medias[];
