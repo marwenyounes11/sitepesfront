@@ -36,7 +36,7 @@
                   
                 <mat-card-content>
                     <p>{{item.titre}}</p>
-                    <a href="" >lire la suite <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <a [routerLink]="['/detailarticle', item.id]" >lire la suite <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                 </mat-card-content>
                 
               </mat-card>
