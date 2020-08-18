@@ -7,10 +7,10 @@
                         >
                   <div  ngxSlickItem  *ngFor="let item of crudApi.listData" class="slide">
             <div  class="col-md-4 " >
-                <mat-card class="example-card">
+                <mat-card class="card1">
                     <img class="card-img-top img-responsive"
                         src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
-                        style = "height :150px;width:150px"
+                        style = "height :100px;width:100px"
                        alt="">
                       
                     <mat-card-content>
@@ -31,7 +31,7 @@
             <mat-card class=" card">
                 <img class="card-img-top img-responsive"
                     src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
-                    style = "height :100px;width:150px"
+                    style = "height :100px;width:100px"
                    alt="">
                   
                 <mat-card-content>

@@ -5,8 +5,8 @@ import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './material/material.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -26,6 +26,7 @@ import {HttpClientModule , HttpClient} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import {ToastrModule } from 'ngx-toastr';
 import {AgmCoreModule } from '@agm/core';
+import {AdminModule } from './admin/admin.module';
 import {DatePipe } from '@angular/common';
 import {AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
@@ -77,61 +78,46 @@ import { ListRessourceComponent } from './components/list-ressource/list-ressour
 const appRoutes : Routes = [
   
   
-  {path: 'login', component: LoginComponent},
-  {path: 'logout', redirectTo:'login'},
-  {path: 'admin', component: AdminComponent,canActivate: [
-    AuthGuardService
-],children: [
-  {path: 'larticle', component: ListArticleComponent},
-  {path: 'article', component: AddArticleComponent},
-  {path: 'lmedias', component: MediasComponent},
-  {path: 'medias', component: AddMediasComponent},
-  {path: 'lressource', component: RessourcesComponent},
-  {path: 'addressource', component: AddRessourceComponent},
-  {path: 'addoffre', component: AddOffreComponent},
-  { path: 'offres', component: OffresComponent },
- ]},
 
-  
- {path: '',component: MenuComponent, children: [
-  {path: 'acceuil', component: AcceuilComponent},
-  {path: 'presentation', children: [
-    { path: 'souspresentation', component: SouspresentationComponent },
-    { path: 'prospectus', component: ProspectusComponent },
-    { path: 'emplacement', component: EmplacementComponent }
- ]
-    },
-  {path: 'nosee', children: [
-    { path: 'elan', children: [
-      { path: 'rh', component: RhComponent },
-      { path: 'commerce', component: CommerceComponent },
-      { path: 'comptabilite', component: ComptabiliteComponent },
-      { path: 'finance', component: FinanceComponent }
-   ] },
-    { path: 'pes', children: [
-      { path: 'design', component: DesignComponent },
-      { path: 'developpement', component: DeveloppementComponent },
-      { path: 'marketing', component: MarketingComponent }
-   ] }
- ]},
-  {path: 'partenariats', component: ParetenariatsComponent},
-  {path: 'actualites', redirectTo:'acceuil#page'},
-  { path: 'detailarticle/:id', component: DetailArticleComponent },
-  {path: 'ressource', component: ListRessourceComponent},
-  {path: 'medias', children: [
-    { path: 'photos', component: PhotosComponent },
-    { path: 'press', component: PressComponent },
-    { path: 'videos', component: VideosComponent }
- ]},
-  {path: 'candidature', children: [
-    { path: 'offre', component: OffresComponent },
-    { path: 'postules', component: AddCandidatureComponent },
-    { path: 'response', component: CandidatureresponseComponent  }
- ]},
-  {path: 'contact', component: ContactComponent},
-]},
-  
-];
+  {path: '',component: MenuComponent, children: [
+    {path: 'acceuil', component: AcceuilComponent},
+    {path: 'presentation', children: [
+      { path: 'souspresentation', component: SouspresentationComponent },
+      { path: 'prospectus', component: ProspectusComponent },
+      { path: 'emplacement', component: EmplacementComponent }
+   ]
+      },
+    {path: 'nosee', children: [
+      { path: 'elan', children: [
+        { path: 'rh', component: RhComponent },
+        { path: 'commerce', component: CommerceComponent },
+        { path: 'comptabilite', component: ComptabiliteComponent },
+        { path: 'finance', component: FinanceComponent }
+     ] },
+      { path: 'pes', children: [
+        { path: 'design', component: DesignComponent },
+        { path: 'developpement', component: DeveloppementComponent },
+        { path: 'marketing', component: MarketingComponent }
+     ] }
+   ]},
+    {path: 'partenariats', component: ParetenariatsComponent},
+    {path: 'actualites', redirectTo:'acceuil'},
+    { path: 'detailarticle/:id', component: DetailArticleComponent },
+    {path: 'ressource', component: ListRessourceComponent},
+    {path: 'medias', children: [
+      { path: 'photos', component: PhotosComponent },
+      { path: 'press', component: PressComponent },
+      { path: 'videos', component: VideosComponent }
+   ]},
+    {path: 'candidature', children: [
+      { path: 'offre', component: OffresComponent },
+      { path: 'postules', component: AddCandidatureComponent },
+      { path: 'response', component: CandidatureresponseComponent  }
+   ]},
+    {path: 'contact', component: ContactComponent},
+  ]},
+    
+  ];
 
 @NgModule({
   declarations: [
@@ -183,7 +169,6 @@ const appRoutes : Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule,
     MatDialogModule,
     MatToolbarModule,
     MatMenuModule, 
@@ -199,7 +184,12 @@ const appRoutes : Routes = [
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule.forRoot(appRoutes),
+    MatSliderModule,
+    AdminModule,
+    RouterModule.forRoot(appRoutes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled'
+    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),

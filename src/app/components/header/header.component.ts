@@ -12,10 +12,8 @@ export class HeaderComponent implements OnInit {
   constructor(private vps: ViewportScroller) { }
 
   ngOnInit(): void {
+   
   }
-  scroll(id) {
-    this.vps.scrollToAnchor(id);
-  }
-  
-  
+ 
+ 
 }
