@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
 import { Candidature} from '../model/candidature';
 import { HttpResponse, HttpEventType } from '@angular/common/http';
 import {MatDialog, MatDialogConfig, MAT_DIALOG_DATA,MatDialogRef } from '@angular/material/dialog';
-
+import { OffreService} from '../service/offre.service';
+import { Offre} from '../model/offre';
 @Component({
   selector: 'app-add-candidature',
   templateUrl: './add-candidature.component.html',
@@ -19,16 +20,24 @@ export class AddCandidatureComponent implements OnInit {
   userFile2 ;
   public imagePath1;
   public imagePath2;
+  listOffre:Offre[];
   imgURL1: any;
   imgURL2: any;
   public message: string;
-  constructor(public crudApi: CandidatureService ,public fb: FormBuilder,public toastr: ToastrService, private router : Router ,@Inject(MAT_DIALOG_DATA)  public data,
+  constructor(public crudApi: CandidatureService,public offreApi: OffreService ,public fb: FormBuilder,public toastr: ToastrService, private router : Router ,@Inject(MAT_DIALOG_DATA)  public data,
   public dialogRef:MatDialogRef<AddCandidatureComponent>) { }
   get f() { return this.crudApi.dataForm.controls; }
   ngOnInit(): void {
+    this. getData();
     if (this.crudApi.choixmenu == "A")
     {this.infoForm()};
     
+  }
+  getData() {
+    this.offreApi.getAll().subscribe(
+      response =>{this.listOffre = response;}
+     );
+   
   }
   infoForm() {
     this.crudApi.dataForm = this.fb.group({
@@ -37,7 +46,8 @@ export class AddCandidatureComponent implements OnInit {
       prenom: ['', [Validators.required]],
       telephone: ['', [Validators.required, Validators.pattern(this.getPhoneRegex())]],
       email: ['',[Validators.required, Validators.pattern(/[^@]+@[^\.]+\..+/)]],
-      type: ['', [Validators.required]]
+      type: ['', [Validators.required]],
+      idOffre: ['', Validators.required]
       });
     }
     ResetForm() {

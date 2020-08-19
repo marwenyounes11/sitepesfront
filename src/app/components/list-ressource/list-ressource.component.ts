@@ -10,12 +10,15 @@ import {MatDialog, MatDialogConfig, MAT_DIALOG_DATA,MatDialogRef } from '@angula
 import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule,Validators }
 from '@angular/forms';
 import { AddRessourceComponent } from '../add-ressource/add-ressource.component';
-
+import {trigger, style, animate, transition,state,group} from '@angular/animations';
 @Component({
   selector: 'app-list-ressource',
   templateUrl: './list-ressource.component.html',
-  styleUrls: ['./list-ressource.component.css']
+  styleUrls: ['./list-ressource.component.css'],
+  animations: [
+]
 })
+  
 export class ListRessourceComponent implements OnInit {
   ressource : Ressource;
   ctp : Ressource[];
@@ -35,6 +38,7 @@ export class ListRessourceComponent implements OnInit {
       this.getData();
       this.getCoach();
       this.getCtp();
+      this.getManager();
    
     
   }
@@ -75,7 +79,7 @@ export class ListRessourceComponent implements OnInit {
 
   getManager() {
     this.crudApi.getRessourceManager().subscribe(
-      response =>{this.ctp = response;}
+      response =>{this.manager = response;}
      );
    
   }

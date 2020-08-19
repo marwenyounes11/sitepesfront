@@ -77,8 +77,22 @@
         </mat-form-field>
       
         <br> <br>
-     
-   
+        <mat-form-field appearance="fill">
+          <mat-label>Offre</mat-label>
+          <mat-select formControlName="idOffre"  required>
+            <mat-option *ngFor="let o of  listOffre" [value]="o.id">
+              {{o.reference}}
+            </mat-option>
+            
+          </mat-select>
+          <mat-error
+          *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
+          <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
+           Offre obligatoire
+          </div>
+          </mat-error>
+        </mat-form-field>
+        <br> <br>
       <div class="form-group">
           <label>cv Upload  </label> <br>
               <input type="file" accept="pdf/*" (change)="onSelectFile1($event)">

@@ -1,0 +1,30 @@
+mat-card{
+   height: 300px; 
+   width:300px;
+   margin-bottom: 15px;
+   text-align:center ;
+  
+}
+h1{
+    text-align: center;
+}
+h2{
+margin:10px 10px 10px 10px;
+}
+p{
+padding:1px 1px 1px 1px;
+}
+
+.social-lists{
+    opacity: 0;
+    
+   
+}
+.doc-item:hover .social-lists{
+    margin-top: -6em;
+    opacity: 1;
+    color:red;
+    font-size:30px;
+    
+    
+}
