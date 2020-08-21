@@ -41,7 +41,7 @@ export class RessourcesComponent implements OnInit {
   ngOnInit() {
     this.getData();
   }
-  addarticle()
+  addressource()
   {
     this.crudApi.choixmenu = "A";
     const dialogConfig = new MatDialogConfig();

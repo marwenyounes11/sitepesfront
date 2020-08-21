@@ -4,4 +4,6 @@ export class Ressource {
     prenom: String;
     email : String;
     telephone: String;
+    description: String;
+    type: String;
 }

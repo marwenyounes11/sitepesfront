@@ -17,11 +17,12 @@ mat-toolbar{
 mat-sidenav-container{
     margin-left:15px;
     margin-right:15px;
+   
 }
 
 mat-sidenav{
     padding-left: 15px;
-    
+    background-color: #062639;
 }
 mat-toolbar-row{
     margin-top: 20px;
@@ -29,4 +30,8 @@ mat-toolbar-row{
 }
 a{
   width: 200px;  
+}
+
+mat-nav-list{
+    color:blue; 
 }

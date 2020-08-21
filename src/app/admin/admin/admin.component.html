@@ -16,31 +16,31 @@
 </mat-toolbar>
 
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <mat-nav-list>
+<mat-sidenav-container >
+  <mat-sidenav  #sidenav >
+    <mat-nav-list >
 
       <a mat-list-item [matMenuTriggerFor] = "m1"  >  <span>Gestion Articles</span> </a>
        <mat-menu #m1 = "matMenu">
-        <a mat-menu-item routerLink="/admin/larticle">List Articles</a>
-        <a mat-menu-item routerLink="/admin/article">Add Article</a>
+        <a mat-menu-item routerLink="/admin/larticle" (click)="sidenav.toggle()">List Articles</a>
+        <a mat-menu-item routerLink="/admin/article" (click)="sidenav.toggle()">Add Article</a>
       </mat-menu>
 
       <a mat-list-item [matMenuTriggerFor] = "m2"  >  <span>Gestion Offres d'emploi</span> </a>
       <mat-menu #m2 = "matMenu">
-       <a mat-menu-item routerLink="/admin/offres">List Offres</a>
-       <a mat-menu-item routerLink="/admin/addoffre">Add Offre</a>
+       <a mat-menu-item routerLink="/admin/offres" (click)="sidenav.toggle()">List Offres</a>
+       <a mat-menu-item routerLink="/admin/addoffre" (click)="sidenav.toggle()">Add Offre</a>
      </mat-menu>
 
      <a mat-list-item [matMenuTriggerFor] = "m3"  >  <span>Gestion Medias</span> </a>
        <mat-menu #m3 = "matMenu">
-        <a mat-menu-item routerLink="/admin/lmedias">List Medias</a>
-        <a mat-menu-item routerLink="/admin/medias">Add Medias</a>
+        <a mat-menu-item routerLink="/admin/lmedias" (click)="sidenav.toggle()">List Medias</a>
+        <a mat-menu-item routerLink="/admin/medias" (click)="sidenav.toggle()">Add Medias</a>
       </mat-menu>
       <a mat-list-item [matMenuTriggerFor] = "m4"  >  <span>Gestion Ressources</span> </a>
       <mat-menu #m4 = "matMenu">
-       <a mat-menu-item routerLink="/admin/lressource">List Ressources</a>
-       <a mat-menu-item routerLink="/admin/addressource">Add Ressources</a>
+       <a mat-menu-item routerLink="/admin/lressource" (click)="sidenav.toggle()">List Ressources</a>
+       <a mat-menu-item routerLink="/admin/addressource" (click)="sidenav.toggle()">Add Ressources</a>
      </mat-menu>
     </mat-nav-list>
   </mat-sidenav>

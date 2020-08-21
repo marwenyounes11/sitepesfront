@@ -56,9 +56,10 @@ export class RessourceService {
     return this.http.get('http://localhost:8085/api/ressourcemanager');
   }
 
-  uploadFile(file: File): Observable<HttpEvent<{}>> {
+  uploadFile(file1: File,file2: File): Observable<HttpEvent<{}>> {
 		const formdata: FormData = new FormData();
-		formdata.append('file', file);
+        formdata.append('file1', file1);
+        formdata.append('file2', file2);
 		const req = new HttpRequest('POST', '<Server URL of the file upload>', formdata, {
 			  reportProgress: true,
 			  responseType: 'text'
