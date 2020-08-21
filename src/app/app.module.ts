@@ -1,4 +1,5 @@
 import { BrowserModule  } from '@angular/platform-browser';
+import { JwPaginationModule } from 'jw-angular-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
@@ -73,6 +74,7 @@ import { DetailArticleComponent } from './components/article/detail-article/deta
 import { RessourcesComponent } from './components/ressources/ressources.component';
 import { AddRessourceComponent } from './components/add-ressource/add-ressource.component';
 import { ListRessourceComponent } from './components/list-ressource/list-ressource.component';
+import { DetailRessourceComponent } from './components/detail-ressource/detail-ressource.component';
 
 
 const appRoutes : Routes = [
@@ -104,6 +106,7 @@ const appRoutes : Routes = [
     {path: 'actualites', redirectTo:'acceuil'},
     { path: 'detailarticle/:id', component: DetailArticleComponent },
     {path: 'ressource', component: ListRessourceComponent},
+    { path: 'detailressource/:id', component: DetailRessourceComponent },
     {path: 'medias', children: [
       { path: 'photos', component: PhotosComponent },
       { path: 'press', component: PressComponent },
@@ -160,10 +163,12 @@ const appRoutes : Routes = [
     DetailArticleComponent,
     RessourcesComponent,
     AddRessourceComponent,
-    ListRessourceComponent
+    ListRessourceComponent,
+    DetailRessourceComponent
   ],
   imports: [
     BrowserModule,
+    JwPaginationModule,
     SlickCarouselModule,
     NgbModule,
     FormsModule,

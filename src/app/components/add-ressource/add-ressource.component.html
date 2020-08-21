@@ -49,6 +49,11 @@
       </mat-error>
       </mat-form-field>
     <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea required matInput placeholder="taper le description" formControlName="description" id="description"></textarea>
+    </mat-form-field>
+    <br>
     <mat-form-field appearance="fill">
         <mat-label>Type</mat-label>
         <mat-select formControlName="type"  required>
@@ -79,11 +84,15 @@
 
     <div class="form-group">
       <label>File Upload  </label> <br>
-          <input type="file" accept="image/*" (change)="onSelectFile($event)"> <br>
-          <img  [src]="imgURL" height="200" *ngIf="imgURL">
+          <input type="file" accept="image/*" (change)="onSelectFile1($event)"> <br>
+          <img  [src]="imgURL1" height="200" *ngIf="imgURL1">
   </div> 
 
-
+  <div class="form-group">
+    <label>File Upload  </label> <br>
+        <input type="file" accept="image/*" (change)="onSelectFile2($event)"> <br>
+        <img  [src]="imgURL2" height="200" *ngIf="imgURL2">
+</div> 
  
       
     </mat-card-content>

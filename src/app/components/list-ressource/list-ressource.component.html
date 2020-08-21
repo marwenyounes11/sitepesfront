@@ -1,85 +1,61 @@
 <h1>Les ressources humaines de ELAN/PES</h1>
-<div class=cotainer>
-  <div class="row">
-    <div class="col-md-4">
-  <mat-sidenav-container class="example-container" >
-    <mat-sidenav #drawer mode="side" opened role="navigation">
-      <mat-nav-list>
-        <a mat-list-item routerLink='/first'>First Component</a>
-        <a mat-list-item routerLink='/second'>Second Component</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+  <h3>Chercher une Ressource </h3> 
+  <span>Filtrer votre recherche</span>
+  <br> <br>
+  <mat-form-field>
+    <input  matInput type="text" placeholder="taper le nom de ressource" formControlName="nom" id="nom">
+  </mat-form-field>
+  <br> <br>
+  <mat-form-field>
+    <mat-label>type</mat-label>
+    <br>
+    <mat-select #mode value="side">
+      <mat-option value=""></mat-option>
+      <mat-option value="side">ctp</mat-option>
+      <mat-option value="over">coach</mat-option>
+      <mat-option value="push">manager</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class=cotainer>
+      <div class="row r">
+           <div class="col-md-12 center" >
+         <div *ngFor="let item of pageOfItems">
+           <div class="col-md-4  doc-item" >
+                    <mat-card class="example-card">
+                   <img class="card-img-top img-responsive"
+                       src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
+                       style = "height :fil-content;width:fil-content"
+                      alt="">
+                      <div class="col-md-2" >
+                      <mat-card-content class="social-lists">
+                          <p><b>{{item.nom}}</b></p>
+                          <p><b>{{item.prenom}}</b></p>
+                          <p><b>{{item.type}}</b></p>
+                      </mat-card-content>
+                      </div>
+                     </mat-card>
+                     <a [routerLink]="['/detailressource', item.id]" >visiter page personnelle</a>
+           </div>
+           </div>
+       </div>
+       
+      </div>
+      
+     </div>
+     <div class="pageres">
+     <jw-pagination [items]="ressource" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
     </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-</div>
-<h2>Liste Collaborateurs temporaires en perfectionnement </h2>
-<div class="row">
-     <div class="col-md-12 center" >
-   <div *ngFor="let item of ctp">
-     <div class="col-md-4" >
-              <mat-card class="example-card">
-             <img class="card-img-top img-responsive"
-                 src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
-                 style = "height :fil-content;width:fil-content"
-                alt="">
-                <mat-card-content>
-                    <p @fade @slidein><b>{{item.nom}}</b></p>
-                    <p @fade @slidein><b>{{item.prenom}}</b></p>
-                    <p @fade @slidein><b>{{item.type}}</b></p>
-                </mat-card-content>
-               </mat-card>
-     </div>
-     </div>
- </div>
+</mat-sidenav-container>
+    
  
-</div>
-
-<h2>Liste Coach </h2>
-<div class="row">
-    <div class="col-md-12 center" >
-  <div *ngFor="let item of coach">
-    <div class="col-md-4 doc-item" >
-             <mat-card class="example-card">
-            <img class="card-img-top img-responsive"
-                src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
-                style = "height :fil-content;width:fil-content"
-               alt="">
-            <mat-card-content class="social-lists">
-                <p> <b>{{item.nom}}</b></p>
-                <p><b>{{item.prenom}}</b></p>
-                <p><b>{{item.type}}</b></p>
-            </mat-card-content>
-              </mat-card>
-    </div>
-    </div>
-</div>
-
-</div>
-
-<h2>Manager </h2>
-<div class="row">
-    <div class="col-md-12 center" >
-  <div *ngFor="let item of manager">
-    <div class="col-md-4 doc-item" >
-             <mat-card class="example-card">
-            <img class="card-img-top img-responsive"
-                src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
-                style = "height :fil-content;width:fil-content"
-               alt="">
-               <mat-card-content class="social-lists">
-                <p><b>{{item.nom}}</b></p>
-                <p><b>{{item.prenom}}</b></p>
-                <p><b>{{item.type}}</b></p>
-            </mat-card-content>
-              </mat-card>
-    </div>
-    </div>
-</div>
-</div>
-</div>
 
 
 

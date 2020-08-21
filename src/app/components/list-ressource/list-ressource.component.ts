@@ -1,4 +1,4 @@
-import { Component, OnInit ,Inject} from '@angular/core';
+import { Component,Input, OnInit ,Inject} from '@angular/core';
 import { RessourceService} from '../service/ressource.service';
 import { ToastrService } from 'ngx-toastr';
 import { Ressource} from '../model/Ressource';
@@ -20,6 +20,8 @@ import {trigger, style, animate, transition,state,group} from '@angular/animatio
 })
   
 export class ListRessourceComponent implements OnInit {
+  @Input() pageSize = 1;
+  pageOfItems: Array<any>;
   ressource : Ressource;
   ctp : Ressource[];
   coach: Ressource[];
@@ -58,7 +60,7 @@ export class ListRessourceComponent implements OnInit {
   
   getData() {
     this.crudApi.getAll().subscribe(
-      response =>{this.crudApi.listData = response;}
+      response =>{this.ressource = response;}
      );
    
   }
@@ -107,5 +109,8 @@ export class ListRessourceComponent implements OnInit {
     
     this.matDialog.open(AddRessourceComponent, dialogConfig);
   }
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
+}
 
 }

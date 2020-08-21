@@ -23,6 +23,9 @@ export class RessourceService {
     return this.http.get<Ressource>(`http://localhost:8085/api/ressources/${id}`);
   }
  
+  getRessource(cv:String ): Observable<Ressource> {
+    return this.http.get<Ressource>(`http://localhost:8085/api/ressources/${cv}`);
+  }
   createData(formData: FormData): Observable<any> {
     return this.http.post('http://localhost:8085/api/ressources', formData);
   }
