@@ -65,7 +65,7 @@ addData() {
     this.crudApi.updatedata(this.crudApi.dataForm.value.id,this.crudApi.dataForm.value).
     subscribe( data => {
       this.toastr.success( 'Modification Faite avec Success');
-
+     this.ResetForm();
       this.router.navigate(['/contact']);
     });
   }

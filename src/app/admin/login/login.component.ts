@@ -20,11 +20,7 @@ import {
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   animations: [
-    trigger('ngIfAnimation', [
-      transition(':enter, :leave', [
-        query('@*', animateChild(),{ optional: true })
-      ])
-    ]),
+    
     trigger('easeInOut', [
       transition('void => *', [
           style({

@@ -7,7 +7,7 @@
     </div>
 </mat-toolbar>
 
-    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+    <form  id="f" [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
       <mat-card-content>
       <mat-form-field>
         <mat-label>Nom</mat-label>
@@ -33,7 +33,7 @@
          </div>
         </mat-error>
       </mat-form-field>
-      <br> <br> <br>
+      <br> 
       <mat-form-field appearance="standard">
         <mat-label>Téléphone </mat-label>
         <mat-icon matPrefix>phone</mat-icon>
@@ -82,23 +82,19 @@
     </mat-form-field> -->
     
 
-    <div class="form-group">
-      <label>File Upload  </label> <br>
-          <input type="file" accept="image/*" (change)="onSelectFile1($event)"> <br>
+    <div class="form-group img">
+      <label>Upload Image </label> <br>
+          <input style="width: 500px;" class=" telecharger" type="file" accept="image/*" (change)="onSelectFile1($event)"> <br>
           <img  [src]="imgURL1" height="200" *ngIf="imgURL1">
   </div> 
 
-  <div class="form-group">
-    <label>File Upload  </label> <br>
-        <input type="file" accept="image/*" (change)="onSelectFile2($event)"> <br>
+  <div class="form-group cv">
+    <label>Upload CV </label> <br>
+        <input style="width: 500px;" class=" telecharger" type="file" accept="pdf/*" (change)="onSelectFile2($event)"> <br>
         <img  [src]="imgURL2" height="200" *ngIf="imgURL2">
-</div> 
- 
-      
+</div>    
     </mat-card-content>
-    <br>
-    <br>
-      
+    <br> 
     <mat-card-actions align="center">
         <button type="submit" class="btn btn-dark"><mat-icon>send</mat-icon> Submit</button>
         <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>

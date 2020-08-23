@@ -1,1 +1,13 @@
-<p>detail-ressource works!</p>
+<h1>{{ressource.nom}} {{ressource.prenom}} </h1>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <img class="card-img-top img-responsive"
+                       src = "{{host+'/api/Imgressources/'+ressource.id}}" 
+                       style = "height :100px;width:100px"
+                      alt="">
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>{{ressource.description}}</p>
+    </mat-sidenav-content>
+</mat-sidenav-container>

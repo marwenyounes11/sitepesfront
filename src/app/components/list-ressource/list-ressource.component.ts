@@ -20,9 +20,21 @@ import {trigger, style, animate, transition,state,group} from '@angular/animatio
 })
   
 export class ListRessourceComponent implements OnInit {
+  _listFilter = '';
+ 
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredRessource = this.listFilter  ? this.performFilter(this.listFilter) : this.ressources;
+  }
+ 
+ 
   @Input() pageSize = 1;
   pageOfItems: Array<any>;
-  ressource : Ressource;
+  ressources : Ressource[];
+  filteredRessource : Ressource[];
   ctp : Ressource[];
   coach: Ressource[];
   manager: Ressource[];
@@ -33,9 +45,12 @@ export class ListRessourceComponent implements OnInit {
     private matDialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef:MatDialogRef<AddRessourceComponent>,) { }
- 
+    performFilter(filterBy: string): Ressource[] {
+      filterBy = filterBy.toLocaleLowerCase();
+      return this.ressources.filter((ressource: Ressource) =>
+        ressource.nom.toLocaleLowerCase().localeCompare(filterBy) == 0);
+    }
   ngOnInit() {
-    
      
       this.getData();
       this.getCoach();
@@ -60,7 +75,10 @@ export class ListRessourceComponent implements OnInit {
   
   getData() {
     this.crudApi.getAll().subscribe(
-      response =>{this.ressource = response;}
+      response =>{
+        this.ressources = response;
+        this.filteredRessource = response;
+      }
      );
    
   }

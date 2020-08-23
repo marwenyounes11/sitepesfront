@@ -5,24 +5,11 @@
   <span>Filtrer votre recherche</span>
   <br> <br>
   <mat-form-field>
-    <input  matInput type="text" placeholder="taper le nom de ressource" formControlName="nom" id="nom">
+    <input  matInput type="text" placeholder="taper le nom de ressource" [(ngModel)]="listFilter">
   </mat-form-field>
-  <br> <br>
-  <mat-form-field>
-    <mat-label>type</mat-label>
-    <br>
-    <mat-select #mode value="side">
-      <mat-option value=""></mat-option>
-      <mat-option value="side">ctp</mat-option>
-      <mat-option value="over">coach</mat-option>
-      <mat-option value="push">manager</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content *ngIf="ressources && ressources.length">
     <div class=cotainer>
       <div class="row r">
            <div class="col-md-12 center" >
@@ -49,9 +36,9 @@
       </div>
       
      </div>
-     <div class="pageres">
-     <jw-pagination [items]="ressource" (changePage)="onChangePage($event)"></jw-pagination>
-    </div>
+     <div *ngIf="filteredRessource && filteredRessource.length; then thenBlock else elseBlock"></div>
+<ng-template class="pageres" #thenBlock> <jw-pagination  [items]= "filteredRessource"   (changePage)="onChangePage($event)"></jw-pagination></ng-template>
+<ng-template class="pageres" #elseBlock><jw-pagination    [items]="ressources" (changePage)="onChangePage($event)"></jw-pagination></ng-template>
     </mat-sidenav-content>
 </mat-sidenav-container>
     
