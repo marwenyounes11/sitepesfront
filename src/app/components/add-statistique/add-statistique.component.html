@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        
+    </div>
+    <div>
+    <h1>Gestion Statistique</h1> 
+    </div>
+  </mat-toolbar>
+        <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+            <mat-card-content>
+                
+           
+          <mat-form-field>
+            <mat-label>Nombre jeunes Formés</mat-label>
+            <input required matInput type="number" placeholder="taper le nombre des jeunes formés" formControlName="nbFormés" id="nbFormés">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.nbFormés?.errors && (this.crudApi.dataForm.controls.nbFormés?.dirty || this.crudApi.dataForm.controls.nbFormés?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.nbFormés?.errors.required">
+                Nombre jeunes Formés
+              </div>
+          </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Nombre jeunes Embauchés</mat-label>
+            <input required matInput type="number" placeholder="taper le nombre des jeunes formés" formControlName="nbFormés" id="nbFormés">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.nbFormés?.errors && (this.crudApi.dataForm.controls.nbFormés?.dirty || this.crudApi.dataForm.controls.nbFormés?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.nbFormés?.errors.required">
+                Nombre jeunes Embauchés
+              </div>
+          </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Nombre jeunes Certifiés</mat-label>
+            <input required matInput type="number" placeholder="taper le nombre des jeunes formés" formControlName="nbFormés" id="nbFormés">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.nbFormés?.errors && (this.crudApi.dataForm.controls.nbFormés?.dirty || this.crudApi.dataForm.controls.nbFormés?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.nbFormés?.errors.required">
+                Nombre jeunes Certifiés
+              </div>
+          </mat-error>
+          </mat-form-field>
+          
+         </mat-card-content>
+         <br>
+         <br>
+          <mat-card-actions align="center">
+            <button type="submit" class="btn btn-dark"><mat-icon>send</mat-icon> Submit</button>
+            <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+          </mat-card-actions>
+        </form>

@@ -2,29 +2,18 @@
     display: inline;
 }
 
-a [mat-tab-link]{
-    width: 80px;
-   
-}
+
 
  a:hover{
     background-color: #185fac;
 }
-mat-toolbar{
-    background-color:#FFFFFF;
-    text-align:center;
-   
-    
-}
+
 img {
     max-width: 100%;
     width:100px;
     height:100px;
 }
 
-header{
-    width: 100%;
-}
 
 
 .w3-red{
@@ -33,37 +22,48 @@ header{
 
 
 
-.conteneur{
-    width:100%;
-    min-width: 400px;
-    max-width:1000px;
-    margin:0 auto;
-}
-.m1{
-    
-  
-}
-.m2{
-    margin-left: 50px;
-    padding-top: 10px;
-}
-.m3{
-    margin-left: 230px;
-    padding-top: 3px;
-}
 
 @media (min-width: 768px) {
     .container-fluide {
-      width: 750px;
+      min-width: 1400px; 
     }
+    mat-toolbar{
+      max-width: 500px; 
+  }
+    mat-toolbar-row{
+      max-width: 500px; 
+  }
+  a [mat-tab-link]{
+    max-width: 20px;
+}
   }
   @media (min-width: 992px) {
     .container-fluide {
-      width: 970px;
+      min-width: 1900px; 
     }
+    mat-toolbar{
+      max-width: 810px; 
+  }
+    mat-toolbar-row{
+      max-width: 800px; 
+  }
+  a [mat-tab-link]{
+    max-width: 30px;
+}
   }
   @media (min-width: 1200px) {
     .container-fluide {
-      width: 1170px;
+      min-width: 1900px; 
     }
+    mat-toolbar{
+      max-width: 910px; 
+  }
+    mat-toolbar-row{
+      max-width: 900px; 
+  }
+  a [mat-tab-link]{
+    max-width: 60px;
+   
+}
+
   }

@@ -29,9 +29,8 @@
         <div class="list-group list-group-flush" *ngFor="let item of crudApi.lastData">
           <div>
             <mat-card class=" card">
-                <img class="card-img-top img-responsive"
+                <img class="card-img-top img-responsive im"
                     src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
-                    style = "height :100px;width:100px"
                    alt="">
                   
                 <mat-card-content>

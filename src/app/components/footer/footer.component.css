@@ -67,9 +67,7 @@ padding:10px ;
   }
   #footer
   {
-      background-color:olivedrab;
-      width:100%;
-     
+      background-color:olivedrab;   
   }
   .contacter{
 padding-top:15px ;
@@ -102,3 +100,45 @@ padding-right: 15px;
    text-align: left;
   }
   
+  @media (min-width: 768px) {
+    .container-fluide {
+      min-width: 900px;
+    }
+    .cs-footer-widgets{
+      min-width: 900px;
+    }
+
+    #footer
+  {
+      background-color:olivedrab;  
+      min-width: 1100px; 
+  }
+   
+  }
+  @media (min-width: 992px) {
+    .container-fluide {
+      min-width: 1100px;
+    }
+    .cs-footer-widgets{
+     min-width: 1100px;
+    }
+    #footer
+    {
+        background-color:olivedrab;  
+        min-width: 1450px; 
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-fluide {
+      min-width: 1400px;
+    }
+    .cs-footer-widgets{
+      min-width: 1400px;
+    }
+    
+    #footer
+    {
+        background-color:olivedrab;  
+        min-width: 1700px; 
+    }
+  }

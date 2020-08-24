@@ -75,6 +75,8 @@ import { RessourcesComponent } from './components/ressources/ressources.componen
 import { AddRessourceComponent } from './components/add-ressource/add-ressource.component';
 import { ListRessourceComponent } from './components/list-ressource/list-ressource.component';
 import { DetailRessourceComponent } from './components/detail-ressource/detail-ressource.component';
+import { StatistiqueComponent } from './components/statistique/statistique.component';
+import { AddStatistiqueComponent } from './components/add-statistique/add-statistique.component';
 
 
 const appRoutes : Routes = [
@@ -164,7 +166,9 @@ const appRoutes : Routes = [
     RessourcesComponent,
     AddRessourceComponent,
     ListRessourceComponent,
-    DetailRessourceComponent
+    DetailRessourceComponent,
+    StatistiqueComponent,
+    AddStatistiqueComponent
   ],
   imports: [
     BrowserModule,
