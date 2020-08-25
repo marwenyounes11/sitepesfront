@@ -1,0 +1,34 @@
+
+    <h1>Inscrire avec l'email</h1> 
+ 
+        <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+            <mat-card-content>
+          <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input required matInput type="text" placeholder="taper le username" formControlName="username" id="username">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.username?.errors && (this.crudApi.dataForm.controls.username?.dirty || this.crudApi.dataForm.controls.username?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.username?.errors.required">
+                User Name
+              </div>
+          </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input required matInput type="password" placeholder="taper le mot de passe de votre compte email" formControlName="password" id="password">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.password?.errors && (this.crudApi.dataForm.controls.password?.dirty || this.crudApi.dataForm.controls.password?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.password?.errors.required">
+                Password
+              </div>
+          </mat-error>
+          </mat-form-field>
+         </mat-card-content>
+         <br>
+         <br>
+          <mat-card-actions align="center">
+            <button type="submit" class="btn btn-dark" [mat-dialog-close]="true"><mat-icon>send</mat-icon> Submit</button>
+            <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+          </mat-card-actions>
+        </form>

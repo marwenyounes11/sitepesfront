@@ -11,3 +11,9 @@ iframe {
   left:0px;
   
 }
+p{
+  min-width: 1000px;
+}
+.v{
+  min-width: 700px;
+}

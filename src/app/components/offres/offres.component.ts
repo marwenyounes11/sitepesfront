@@ -45,7 +45,6 @@ export class OffresComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
-    //dialogConfig.data="gdddd";
     this.matDialog.open(AddOffreComponent, dialogConfig);
   }
   removeData(id: number) {

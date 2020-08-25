@@ -46,7 +46,6 @@ export class StatistiqueComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
-    //dialogConfig.data="gdddd";
     this.matDialog.open(AddStatistiqueComponent, dialogConfig);
   }
   removeData(id: number) {

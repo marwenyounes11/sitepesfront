@@ -77,6 +77,7 @@ import { ListRessourceComponent } from './components/list-ressource/list-ressour
 import { DetailRessourceComponent } from './components/detail-ressource/detail-ressource.component';
 import { StatistiqueComponent } from './components/statistique/statistique.component';
 import { AddStatistiqueComponent } from './components/add-statistique/add-statistique.component';
+import { InscrireComponent } from './components/inscrire/inscrire.component';
 
 
 const appRoutes : Routes = [
@@ -120,6 +121,7 @@ const appRoutes : Routes = [
       { path: 'response', component: CandidatureresponseComponent  }
    ]},
     {path: 'contact', component: ContactComponent},
+    {path: 'inscrire', component: InscrireComponent},
   ]},
     
   ];
@@ -168,7 +170,8 @@ const appRoutes : Routes = [
     ListRessourceComponent,
     DetailRessourceComponent,
     StatistiqueComponent,
-    AddStatistiqueComponent
+    AddStatistiqueComponent,
+    InscrireComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ import { Statistique} from '../model/statistique';
 export class AddStatistiqueComponent implements OnInit {
   constructor(public crudApi: StatistiqueService ,public fb: FormBuilder,public toastr: ToastrService,
     private router : Router) { }
-
+    minDate = new Date(2014, 0, 3);
   ngOnInit() {
   
     if (this.crudApi.choixmenu == "A")
