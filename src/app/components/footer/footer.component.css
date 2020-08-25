@@ -61,10 +61,7 @@ padding:10px ;
     margin: 5px 2px;
   }
 
-  #cop{
-    text-align: center;
-    font-size: 20px;
-  }
+  
   #footer
   {
       background-color:olivedrab;   
@@ -113,7 +110,14 @@ padding-right: 15px;
       background-color:olivedrab;  
       min-width: 1100px; 
   }
-   
+  #cop{
+    margin-left: 50px;
+    font-size: 10px;
+  }
+  .i{
+    min-width: 150px;
+    min-height:150px;
+  }
   }
   @media (min-width: 992px) {
     .container-fluide {
@@ -127,6 +131,14 @@ padding-right: 15px;
         background-color:olivedrab;  
         min-width: 1450px; 
     }
+    #cop{
+      margin-left: 100px;
+      font-size: 20px;
+    }
+    .i{
+      min-width: 300px;
+      min-height: 300px;
+    }
   }
   @media (min-width: 1200px) {
     .container-fluide {
@@ -135,10 +147,17 @@ padding-right: 15px;
     .cs-footer-widgets{
       min-width: 1400px;
     }
-    
+    #cop{
+      margin-left: 100px;
+      font-size: 20px;
+    }
     #footer
     {
         background-color:olivedrab;  
         min-width: 1700px; 
+    }
+    .i{
+      min-width: 400px;
+      min-height: 400px;
     }
   }
