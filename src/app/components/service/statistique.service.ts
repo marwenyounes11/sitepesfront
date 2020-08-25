@@ -42,5 +42,10 @@ export class StatistiqueService {
    
     return this.http.get('http://localhost:8085/api/statistiques');
   }
+
+  getLast(): Observable<any> {
+   
+    return this.http.get('http://localhost:8085/api/statistiques/lastdate');
+  }
   
 }

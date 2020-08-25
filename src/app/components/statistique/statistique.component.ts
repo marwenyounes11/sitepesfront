@@ -11,7 +11,7 @@ from '@angular/forms';
 import {MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatDialogRef } from "@angular/material/dialog";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { AddStatistiqueComponent } from '../add-Statistique/add-statistique.component';
+import { AddStatistiqueComponent } from '../add-statistique/add-statistique.component';
 
 @Component({
   selector: 'app-statistique',

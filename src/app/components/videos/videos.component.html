@@ -7,24 +7,7 @@
 
 
 <div class="container content">
-    <div class="row">
-        <div class="col-md-12 center" >
-      <div *ngFor="let item of crudApi.videos">
-        <div class="col-md-6" >
-            
-            <mat-card class="example-card" >
-                <video width="400" height="315" controls>
-                    <source  src = "{{this.crudApi.host+'/api/Videomedias/'+item.id}}" 
-                     type="video/mp4">
-                </video>
-            </mat-card>
-            
-           
-        
-        </div>
-    </div>
-    </div>
-       
-    </div>
-       
-    </div>
+    <p>
+        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Ru2UBKv2hMw" width="100%"></iframe>
+    </p>	
+</div>

@@ -1,33 +1,12 @@
 
 @media (min-width: 768px) {
-    .container-fluide {
-      min-width: 900px;
-    }
-    .cs-footer-widgets{
-      min-width: 900px;
-    }
-
-    #footer
-  {
-      background-color:olivedrab;  
-      min-width: 900px; 
-  }
+  
   .contenu{
     max-width: 900px;
 }
   }
   @media (min-width: 992px) {
-    .container-fluide {
-      min-width: 1350px;
-    }
-    .cs-footer-widgets{
-     min-width: 1350px;
-    }
-    #footer
-    {
-        background-color:olivedrab;  
-        min-width: 1450px; 
-    }
+    
     .contenu{
         max-width: 1450px;
        
@@ -35,18 +14,7 @@
     
   }
   @media (min-width: 1200px) {
-    .container-fluide {
-      min-width: 1600px;
-    }
-    .cs-footer-widgets{
-      min-width: 1600px;
-    }
-    
-    #footer
-    {
-        background-color:olivedrab;  
-        min-width: 1700px; 
-    }
+   
     .contenu{
        
         max-width: 1700px;

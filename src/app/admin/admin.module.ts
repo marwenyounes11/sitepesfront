@@ -11,6 +11,9 @@ import { RessourcesComponent } from '../components/ressources/ressources.compone
 import { AddRessourceComponent } from '../components/add-ressource/add-ressource.component';
 import { AddOffreComponent } from '../components/add-offre/add-offre.component';
 import { OffresComponent } from '../components/offres/offres.component';
+import { StatistiqueComponent } from '../components/statistique/statistique.component';
+import { AddStatistiqueComponent } from '../components/add-statistique/add-statistique.component';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -29,6 +32,8 @@ import { OffresComponent } from '../components/offres/offres.component';
         {path: 'addressource', component: AddRessourceComponent},
         {path: 'addoffre', component: AddOffreComponent},
         { path: 'offres', component: OffresComponent },
+        {path: 'addstatistique', component: AddStatistiqueComponent},
+        { path: 'statistiques', component: StatistiqueComponent },
        ]},
       
     ])

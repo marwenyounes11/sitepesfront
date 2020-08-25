@@ -15,11 +15,11 @@ import {MatDialog, MatDialogConfig, MAT_DIALOG_DATA,MatDialogRef } from '@angula
 export class AddMediasComponent implements OnInit {
   wcode : string = '';
   userFile1 ;
-  userFile2 ;
+
   public imagePath1;
-  public imagePath2;
+
   imgURL1: any;
-  imgURL2: any;
+ 
   public message: string;
   constructor(public crudApi: MediasService ,public fb: FormBuilder,public toastr: ToastrService, private router : Router ,@Inject(MAT_DIALOG_DATA)  public data,
   public dialogRef:MatDialogRef<AddMediasComponent>) { }
@@ -55,13 +55,10 @@ addData() {
   const medias = this.crudApi.dataForm.value;
   formData.append('medias',JSON.stringify(medias));
   formData.append('file1',this.userFile1);
-  formData.append('file2',this.userFile2);
   this.crudApi.createData(formData).subscribe( data => {
     this.toastr.success( 'Validation Faite avec Success');
     this.userFile1="";
-    this.userFile2="";
     formData.delete('file1');
-    formData.delete('file2');
     this.crudApi.dataForm.reset();
     this.router.navigate(['/admin/lmedias']); 
   },
@@ -107,30 +104,5 @@ addData() {
 }
 
 
-onSelectFile2(event) {
-  if (event.target.files.length > 0)
-  {
-    const file2 = event.target.files[0];
-   
-    this.userFile2 = file2;
-    
-  
 
-  var mimeType2 = event.target.files[0].type;
-  if (mimeType2.match(/image\/*/) == null) {
-    this.message = "Only images are supported.";
-    return;
-  }
-  
-  var reader = new FileReader();
-  
-  this.imagePath2 = file2;
-  reader.readAsDataURL(file2); 
-  reader.onload = (_event) => { 
-    this.imgURL2 = reader.result; 
-  }
-
-  
-}
-}
 }

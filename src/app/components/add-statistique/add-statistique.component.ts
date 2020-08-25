@@ -24,10 +24,10 @@ export class AddStatistiqueComponent implements OnInit {
  
   infoForm() {
     this.crudApi.dataForm = this.fb.group({ 
-      dateCreation: ['', [Validators.required]],
-      nbFormés: ['', [Validators.required]],
-      nbEmbauchés: ['', [Validators.required]],
-      nbCertifiés: ['', [Validators.required]],
+      dateStatistique: ['', [Validators.required]],
+      nbFormer: ['', [Validators.required]],
+      nbEmbaucher: ['', [Validators.required]],
+      nbCertifier: ['', [Validators.required]],
        
         });
     }

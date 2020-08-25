@@ -1,7 +1,7 @@
 export class Statistique {
     id: number;
-    dateCreation:number;
-   nbFormés:number;
-   nbEmbauchés:number;
-   nbCertifiés:number;
+    dateStatistique:number;
+   nbFormer:number;
+   nbEmbaucher:number;
+   nbCertifier:number;
 }

@@ -42,6 +42,11 @@
        <a mat-menu-item routerLink="/admin/lressource" (click)="sidenav.toggle()">List Ressources</a>
        <a mat-menu-item routerLink="/admin/addressource" (click)="sidenav.toggle()">Add Ressources</a>
      </mat-menu>
+     <a mat-list-item [matMenuTriggerFor] = "m5"  >  <span>Gestion Statistiques</span> </a>
+     <mat-menu #m5 = "matMenu">
+      <a mat-menu-item routerLink="/admin/statistiques" (click)="sidenav.toggle()">List Statistiques</a>
+      <a mat-menu-item routerLink="/admin/addstatistique" (click)="sidenav.toggle()">Add Statistiques</a>
+    </mat-menu>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

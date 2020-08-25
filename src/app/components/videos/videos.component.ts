@@ -18,9 +18,7 @@ import { AddMediasComponent } from '../medias/add-medias/add-medias.component';
 })
 export class VideosComponent implements OnInit {
 
-  medias : Medias;
-  dernier:Boolean =false;
-  control: FormControl = new FormControl('');
+  
   constructor(public crudApi: MediasService, public toastr: ToastrService,
     private router : Router,public fb: FormBuilder,
     private matDialog: MatDialog,
@@ -30,61 +28,10 @@ export class VideosComponent implements OnInit {
   ngOnInit() {
     
      
-      this.getData();
-      this.getVideos();
+     
    
     
   }
-  addmedias()
-  {
-    this.crudApi.choixmenu = "A";
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
-    dialogConfig.width="50%";
-    
-    this.matDialog.open(AddMediasComponent, dialogConfig);
-  }
  
-  
-
-  
-  getData() {
-    this.crudApi.getAll().subscribe(
-      response =>{this.crudApi.listData = response;}
-     );
-   
-  }
-
-  getVideos() {
-    this.crudApi.getMediasVideos().subscribe(
-      response =>{this.crudApi.videos = response;}
-     );
-   
-  }
- 
- 
-  removeData(id: number) {
-    if (window.confirm('Are sure you want to delete this Medias ?')) {
-    this.crudApi.deleteData(id)
-      .subscribe(
-        data => {
-          console.log(data);
-          this.toastr.warning(' data successfully deleted!'); 
-          this.getData();
-        },
-        error => console.log(error));
-  }
-  }
-  selectData(item : Medias) {
-    this.crudApi.choixmenu = "M";
-    this.crudApi.dataForm = this.fb.group(Object.assign({},item));
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
-    dialogConfig.width="50%";
-    
-    this.matDialog.open(AddMediasComponent, dialogConfig);
-  }
 
 }

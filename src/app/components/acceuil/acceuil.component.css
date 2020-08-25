@@ -13,9 +13,14 @@ h3{
       min-width: 1100px; 
     }
     ngb-carousel{
-    min-width: 900px;
-    margin-left: 50px; 
+    max-width: 900px;
+    margin-left: 100px; 
     }
+
+    img {
+      max-width: 900px; 
+      max-width: 450px; 
+  }
   
 } 
 
@@ -27,9 +32,14 @@ h3{
 
     }
     ngb-carousel{
-        min-width: 1100px; 
-        margin-left: 100px;
+        max-width: 1100px; 
+        margin-left: 150px;
     }
+
+    img {
+      max-width: 1100px; 
+      max-width: 550px; 
+  }
   }
   @media (min-width: 1200px) {
    
@@ -38,8 +48,12 @@ h3{
       min-width: 1700px; 
     }
     ngb-carousel{
-        min-width: 1300px; 
-        margin-left: 100px;
+        max-width: 1300px; 
+        margin-left: 150px;
 
     }
+    img {
+      max-width: 1300px; 
+      max-height: 650px; 
+  }
   }

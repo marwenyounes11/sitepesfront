@@ -12,7 +12,6 @@ export class MediasService {
   host :string = "http://localhost:8085";
   choixmenu : string  = 'A';
   listData : Medias[];
-  videos: Medias[];
  evenement : Medias[];
   atelier : Medias[];
   press : Medias[];
@@ -37,10 +36,7 @@ export class MediasService {
    
     return this.http.delete(`http://localhost:8085/api/medias/${id}`, { responseType: 'text' });
   }
-  getMediasVideos(): Observable<any> {
-   
-    return this.http.get('http://localhost:8085/api/mediasvideos');
-  }
+  
   getMediasCoach(): Observable<any> {
    
     return this.http.get('http://localhost:8085/api/mediascoach');
@@ -70,10 +66,9 @@ export class MediasService {
  
 
  
-  uploadFile(file1: File,file2: File): Observable<HttpEvent<{}>> {
+  uploadFile(file1: File): Observable<HttpEvent<{}>> {
 		const formdata: FormData = new FormData();
         formdata.append('file1', file1);
-        formdata.append('file2', file2);
 		const req = new HttpRequest('POST', '<Server URL of the file upload>', formdata, {
 			  reportProgress: true,
 			  responseType: 'text'

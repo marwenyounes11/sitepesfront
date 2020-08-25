@@ -28,42 +28,50 @@ img {
       min-width: 1400px; 
     }
     mat-toolbar{
-      max-width: 500px; 
+      min-width: 1100px; 
   }
     mat-toolbar-row{
-      max-width: 500px; 
+     min-width: 1100px; 
   }
   a [mat-tab-link]{
-    max-width: 20px;
-}
+    min-width: 100px;
+   }
+   nav{
+    min-width: 1100px;
+  }
   }
   @media (min-width: 992px) {
     .container-fluide {
       min-width: 1900px; 
     }
     mat-toolbar{
-      max-width: 810px; 
+      min-width: 1450px;
   }
     mat-toolbar-row{
-      max-width: 800px; 
+      min-width: 1450px; 
   }
   a [mat-tab-link]{
-    max-width: 30px;
-}
+    min-width: 100px;
+  }
+  nav{
+    min-width: 1450px;
+  }
   }
   @media (min-width: 1200px) {
     .container-fluide {
       min-width: 1900px; 
     }
     mat-toolbar{
-      max-width: 910px; 
+      min-width: 1700px;  
   }
     mat-toolbar-row{
-      max-width: 900px; 
+      min-width: 1700px; 
   }
   a [mat-tab-link]{
-    max-width: 60px;
-   
-}
+    min-width: 100px;
+  }
+  nav{
+    min-width: 1700px;
+  }
 
   }
