@@ -20,7 +20,7 @@ mat-card-content{
         margin:2px 2px 2px 2px ;
     }
     .slide{
-        height: 150px;
+        height: 200px;
         width: 150px;
         scroll-margin-right: 3px;
     }
@@ -58,7 +58,7 @@ mat-card-content{
         margin:2px 2px 2px 2px ;
     }
     .slide{
-        height: 200px;
+        height: 250px;
         width: 200px;
         scroll-margin-right: 3px;
     }
@@ -97,7 +97,7 @@ mat-card-content{
         margin:2px 2px 2px 2px ;
     }
     .slide{
-        height: 250px;
+        height: 300px;
         width: 250px;
         scroll-margin-right: 3px;
     }

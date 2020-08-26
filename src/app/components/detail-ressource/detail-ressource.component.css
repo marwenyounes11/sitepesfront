@@ -2,5 +2,10 @@ mat-sidenav-content{
     height: 500px;
 }
 mat-sidenav{
-    height: 200px; 
+    height: 300px; 
+    width: 250px;
+}
+
+h1{
+    text-align: center;
 }

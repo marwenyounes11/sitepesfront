@@ -78,8 +78,8 @@ import { DetailRessourceComponent } from './components/detail-ressource/detail-r
 import { StatistiqueComponent } from './components/statistique/statistique.component';
 import { AddStatistiqueComponent } from './components/add-statistique/add-statistique.component';
 import { InscrireComponent } from './components/inscrire/inscrire.component';
-
-
+import { CvComponent } from './components/cv/cv.component';
+import { SafePipe } from './components/safe-pipe';
 const appRoutes : Routes = [
   
   
@@ -110,6 +110,7 @@ const appRoutes : Routes = [
     { path: 'detailarticle/:id', component: DetailArticleComponent },
     {path: 'ressource', component: ListRessourceComponent},
     { path: 'detailressource/:id', component: DetailRessourceComponent },
+    { path: 'cv/:id', component: CvComponent },
     {path: 'medias', children: [
       { path: 'photos', component: PhotosComponent },
       { path: 'press', component: PressComponent },
@@ -171,7 +172,9 @@ const appRoutes : Routes = [
     DetailRessourceComponent,
     StatistiqueComponent,
     AddStatistiqueComponent,
-    InscrireComponent
+    InscrireComponent,
+    CvComponent,
+    SafePipe 
   ],
   imports: [
     BrowserModule,
