@@ -14,6 +14,7 @@ export class RessourceService {
   
   choixmenu : string  = 'A';
   listData : Ressource[];
+  data : Ressource;
   public dataForm:  FormGroup; 
   constructor(private http: HttpClient) { }
  

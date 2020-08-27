@@ -18,7 +18,7 @@
         }
     }
 
-    @media (min-width: 992px) {
+@media (min-width: 992px) {
         .tabl{
     
             margin-left:50px ;
@@ -31,15 +31,16 @@
                 margin-top: 50px;
                 margin-left:50px ;
                 margin-right:50px ;
-                width: 1000px;
+                width: 900px;
             }
             table{
-                width: 1000px;
+                width: 900px;
             }
+            
         }
 
 
-        @media (min-width: 1200px) {
+@media (min-width: 1200px) {
             .tabl{
         
                 margin-left:70px ;

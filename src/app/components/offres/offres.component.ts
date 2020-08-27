@@ -43,8 +43,8 @@ export class OffresComponent implements OnInit {
     this.crudApi.choixmenu = "A";
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
-    dialogConfig.width="50%";
+    dialogConfig.width="20px";
+    dialogConfig.height="20px";
     this.matDialog.open(AddOffreComponent, dialogConfig);
   }
   removeData(id: number) {
@@ -64,7 +64,6 @@ export class OffresComponent implements OnInit {
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     
     this.matDialog.open(AddOffreComponent, dialogConfig);

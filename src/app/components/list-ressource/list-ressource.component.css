@@ -17,8 +17,6 @@ padding:1px 1px 1px 1px;
 
 .social-lists{
     opacity: 0;
-    
-   
 }
 .doc-item:hover .social-lists{
     margin-top: -4em;

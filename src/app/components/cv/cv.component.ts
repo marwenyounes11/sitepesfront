@@ -12,15 +12,17 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class CvComponent implements OnInit {
   host :string = "http://localhost:8085";
   errorMessage = '';
-  ressource: Ressource | undefined;
-  url:string;
+  ressource: Ressource ;
+  pdfSrc:string;
   pdf:any;
-blob:Blob;
+
 objectURL:any;
   constructor(private route: ActivatedRoute,
     private router: Router,
     private crudApi: RessourceService,
     private dom:DomSanitizer) {
+      
+
   }
  
   ngOnInit() {
@@ -28,12 +30,15 @@ objectURL:any;
     if (param) {
       const id = +param;
       this.getRessource(id);
-     this.url='http://localhost:8085/api/Cvressources/'+id;
-      this.pdf = this.dom.bypassSecurityTrustResourceUrl(this.url);
+     this.pdfSrc='http://localhost:8085/api/Cvressources/'+id;
+     
+     
     }
     
   }
- 
+ // getSafeUrl() {
+  //  return this.dom.bypassSecurityTrustResourceUrl(this.url);     
+//}
   getRessource(id: number) {
     this.crudApi.getData(id).subscribe(
       response =>{this.ressource = response;},

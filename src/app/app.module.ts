@@ -80,6 +80,7 @@ import { AddStatistiqueComponent } from './components/add-statistique/add-statis
 import { InscrireComponent } from './components/inscrire/inscrire.component';
 import { CvComponent } from './components/cv/cv.component';
 import { SafePipe } from './components/safe-pipe';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 const appRoutes : Routes = [
   
   
@@ -201,6 +202,7 @@ const appRoutes : Routes = [
     MatIconModule,
     MatSliderModule,
     AdminModule,
+     PdfViewerModule,
     RouterModule.forRoot(appRoutes, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled'

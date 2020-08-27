@@ -13,7 +13,7 @@ export class DetailRessourceComponent implements OnInit {
 
   host :string = "http://localhost:8085";
   errorMessage = '';
-  ressource: Ressource | undefined;
+  ressource: Ressource ;
 
   constructor(private route: ActivatedRoute,
     private router: Router,

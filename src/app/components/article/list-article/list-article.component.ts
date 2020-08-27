@@ -34,7 +34,6 @@ export class ListArticleComponent implements OnInit {
     this.crudApi.choixmenu = "A";
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     this.matDialog.open(AddArticleComponent, dialogConfig);
   }
@@ -67,9 +66,8 @@ export class ListArticleComponent implements OnInit {
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
-    dialogConfig.width="50%";
-    dialogConfig.height="50%";
+    dialogConfig.width="600px";
+    dialogConfig.height="600px";
     
     this.matDialog.open(AddArticleComponent, dialogConfig);
   }

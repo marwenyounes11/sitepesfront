@@ -33,7 +33,6 @@ export class CandidatureComponent implements OnInit {
     this.crudApi.choixmenu = "A";
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     
     this.matDialog.open(AddCandidatureComponent, dialogConfig);
@@ -67,7 +66,6 @@ export class CandidatureComponent implements OnInit {
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     
     this.matDialog.open(AddCandidatureComponent, dialogConfig);

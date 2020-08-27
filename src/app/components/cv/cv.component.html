@@ -1,9 +1,11 @@
 
-<body style="height: 100%; width: 100%; overflow: hidden; margin:0px; background-color: rgb(82, 86, 89);">
 
+    <div>
     
-     
-<object class="pdf" [data]="pdf"  type="application/pdf">
-</object>
+   
+        <pdf-viewer [src]="pdfSrc" 
+        [render-text]="true"
+        style="display: block;">    
+     </pdf-viewer>
 
-</body>
+   </div>

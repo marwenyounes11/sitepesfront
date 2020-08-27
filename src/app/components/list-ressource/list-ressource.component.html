@@ -12,7 +12,7 @@
   <mat-sidenav-content *ngIf="ressources && ressources.length">
     <div class=cotainer>
       <div class="row r">
-           <div class="col-md-12 center" >
+           <div class="col-md-12 " >
          <div *ngFor="let item of pageOfItems">
            <div class="col-md-4  doc-item" >
                     <mat-card class="example-card">
@@ -20,13 +20,13 @@
                        src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
                        style = "height :fil-content;width:fil-content"
                       alt="">
-                      <div class="col-md-2" >
+                      
                       <mat-card-content class="social-lists">
                           <p><b>{{item.nom}}</b></p>
                           <p><b>{{item.prenom}}</b></p>
                           <p><b>{{item.type}}</b></p>
                       </mat-card-content>
-                      </div>
+                     
                      </mat-card>
                      <a [routerLink]="['/detailressource', item.id]" >visiter page personnelle</a>
            </div>
