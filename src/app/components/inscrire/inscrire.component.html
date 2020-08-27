@@ -1,6 +1,8 @@
 
-    <h1>Inscrire avec l'email</h1> 
- 
+    <h1>Inscrire avec l'email <span [mat-dialog-close]="true" class="material-icons hide-login-btn">
+      clear
+    </span></h1> 
+    
         <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
             <mat-card-content>
           <mat-form-field>

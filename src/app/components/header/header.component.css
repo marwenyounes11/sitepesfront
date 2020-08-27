@@ -32,6 +32,7 @@ img {
   }
     mat-toolbar-row{
      min-width: 1100px; 
+     margin-left: 0px;
   }
   a [mat-tab-link]{
     min-width: 100px;

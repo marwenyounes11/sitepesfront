@@ -29,13 +29,7 @@ objectURL:any;
       const id = +param;
       this.getRessource(id);
      this.url='http://localhost:8085/api/Cvressources/'+id;
-     this.pdf =
-     this.dom.bypassSecurityTrustResourceUrl(this.url);
-     this.blob = new Blob([this.url], {
-      type: "application/pdf"
-      });
-      this.objectURL = URL.createObjectURL(this.blob);
-      this.pdf = this.dom.bypassSecurityTrustResourceUrl(this.objectURL);
+      this.pdf = this.dom.bypassSecurityTrustResourceUrl(this.url);
     }
     
   }
@@ -49,5 +43,5 @@ objectURL:any;
   onBack(): void {
     this.router.navigate(['/base/detailressource']);
   }
-  variable_name=this.dom.bypassSecurityTrustUrl(this.url);
+
 }

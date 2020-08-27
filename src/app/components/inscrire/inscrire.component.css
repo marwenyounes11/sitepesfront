@@ -1,0 +1,30 @@
+.hide-login-btn{
+    color: #000;
+    position: absolute;
+    padding-left:450px ;
+    cursor: pointer;
+    font-size: 35px;
+    opacity: 7;
+}
+
+mat-icon{
+    text-align: center;
+}
+form{
+    overflow: visible;
+   margin-left:200px;
+   margin-top: 10px;
+   margin-bottom:10px ;
+   width:800px;
+}
+
+button {
+width: 1000px;
+justify-content: center;
+}
+mat-form-field{
+    width:1000px; 
+}
+select{
+    width:1000px;  
+}

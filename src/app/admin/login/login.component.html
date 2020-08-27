@@ -1,7 +1,7 @@
 <body class="bg-gradient-primary">
     <div class="container">
       <div class="show-login-btn" (click)="toggle1();animateMe()">
-        <i class="fas fa-eye"> afficher/fermer la formulaire de login</i>
+        <i class="material-icons" matSuffix (click)="hide= !hide"> {{hide? 'visibility' : 'visibility_off'}} </i><h3>afficher/fermer la formulaire de login</h3>
       </div>
     <div class="row justify-content-center ">
     <div class="col-xl-8 col-lg-10 col-md-7">
@@ -17,6 +17,7 @@
     <div class="text-center">
       <h1 class="h4 text-gray-900 mb-4">Connection</h1>
     </div>
+    
     <form class="user" @easeInOut>
       
       <div class="input-group mb-3">  

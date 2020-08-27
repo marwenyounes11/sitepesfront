@@ -31,7 +31,10 @@ export class PhotosComponent implements OnInit {
     
      
       this.getData();
-    
+      this.getEvenement();
+      this.getAtelier();
+      this.getPress();
+
    
     
   }

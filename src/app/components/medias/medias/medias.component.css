@@ -1,4 +1,12 @@
 
+mat-card{
+    width:200px;
+    height: 200px;
+   margin-bottom: 5px;
+   margin-top: 5px;
+   
+}
+
 
 mat-card-content{
     text-align:center;
@@ -6,4 +14,9 @@ mat-card-content{
 
 .corp{
     overflow: auto;
+}
+
+button{
+    width:99px;
+    left:15px;
 }

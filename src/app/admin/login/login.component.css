@@ -17,7 +17,12 @@ button{
     font-size: 35px;
     opacity: 7;
 }
-
+h3{
+display: inline;
+}
+i{
+    margin-right: 5px;
+}
 .show-login-btn{
     color: #000;
     left:20%;

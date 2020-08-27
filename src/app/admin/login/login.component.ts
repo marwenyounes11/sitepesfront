@@ -53,7 +53,7 @@ import {
 export class LoginComponent implements OnInit {
   state:string ='small';
   show1:boolean = false;
- 
+ hide :boolean = true;
   user: any={};
   loginname : String;
   password : String;
