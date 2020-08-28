@@ -36,9 +36,7 @@ objectURL:any;
     }
     
   }
- // getSafeUrl() {
-  //  return this.dom.bypassSecurityTrustResourceUrl(this.url);     
-//}
+
   getRessource(id: number) {
     this.crudApi.getData(id).subscribe(
       response =>{this.ressource = response;},

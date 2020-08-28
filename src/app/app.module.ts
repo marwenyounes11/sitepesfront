@@ -88,10 +88,8 @@ import { EditRessourceComponent } from './components/edit-ressource/edit-ressour
 import { EditStatistiqueComponent } from './components/edit-statistique/edit-statistique.component';
 const appRoutes : Routes = [
   
-  
-
-  {path: '',component: MenuComponent, children: [
-    {path: 'acceuil', component: AcceuilComponent},
+    {path: '', component: AcceuilComponent ,children: [
+      
     {path: 'presentation', children: [
       { path: 'souspresentation', component: SouspresentationComponent },
       { path: 'prospectus', component: ProspectusComponent },
@@ -130,7 +128,7 @@ const appRoutes : Routes = [
     {path: 'contact', component: ContactComponent},
     {path: 'inscrire', component: InscrireComponent},
   ]},
-    
+ 
   ];
 
 @NgModule({

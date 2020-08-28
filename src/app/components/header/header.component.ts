@@ -20,14 +20,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  addoffre(){
+ /**  addoffre(){
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     dialogConfig.disableClose = true;
     dialogConfig.width="50%";
     this.matDialog.open(InscrireComponent, dialogConfig);
   }
- 
+ */
  
  
 }
