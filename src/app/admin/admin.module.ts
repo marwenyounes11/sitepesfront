@@ -13,7 +13,11 @@ import { AddOffreComponent } from '../components/add-offre/add-offre.component';
 import { OffresComponent } from '../components/offres/offres.component';
 import { StatistiqueComponent } from '../components/statistique/statistique.component';
 import { AddStatistiqueComponent } from '../components/add-statistique/add-statistique.component';
-
+import { EditOffreComponent } from '../components/edit-offre/edit-offre.component';
+import { EditArticleComponent } from '../components/article/edit-article/edit-article.component';
+import { EditMediasComponent } from '../components/edit-medias/edit-medias.component';
+import { EditRessourceComponent } from '../components/edit-ressource/edit-ressource.component';
+import { EditStatistiqueComponent } from '../components/edit-statistique/edit-statistique.component';
 @NgModule({
   declarations: [],
   imports: [
@@ -32,6 +36,26 @@ import { AddStatistiqueComponent } from '../components/add-statistique/add-stati
         {path: 'addressource', component: AddRessourceComponent},
         {path: 'addoffre', component: AddOffreComponent},
         { path: 'offres', component: OffresComponent },
+        {
+          path: 'editoffre/:id/edit',
+          component: EditOffreComponent 
+        },
+        {
+          path: 'editarticle/:id/edit',
+          component: EditArticleComponent 
+        },
+        {
+          path: 'editmedia/:id/edit',
+          component: EditMediasComponent 
+        },
+        {
+          path: 'editressource/:id/edit',
+          component: EditRessourceComponent
+        },
+        {
+          path: 'editstatistique/:id/edit',
+          component: EditStatistiqueComponent
+        },
         {path: 'addstatistique', component: AddStatistiqueComponent},
         { path: 'statistiques', component: StatistiqueComponent },
        ]},

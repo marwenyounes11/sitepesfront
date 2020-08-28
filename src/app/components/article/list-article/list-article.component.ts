@@ -64,11 +64,6 @@ export class ListArticleComponent implements OnInit {
   selectData(item : Article) {
     this.crudApi.choixmenu = "M";
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.autoFocus = true;
-    dialogConfig.width="600px";
-    dialogConfig.height="600px";
     
-    this.matDialog.open(AddArticleComponent, dialogConfig);
   }
 }

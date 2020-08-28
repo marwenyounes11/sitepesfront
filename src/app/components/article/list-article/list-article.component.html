@@ -36,7 +36,7 @@
        alt=""></a>
     </td>
     <td>{{item.corps}}</td>
-    <td><button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)">
+    <td><button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)" [routerLink]="['/admin/editarticle', item.id, 'edit']">
       <i class="fa fa-pencil-square-o" ></i></button></td>
    <td><button class="btn btn-danger btn btn-outline-dark ml-1" (click) = "removeData(item.id)">
       <i class="fa fa-trash-o"></i></button></td>

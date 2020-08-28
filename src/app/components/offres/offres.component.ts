@@ -62,11 +62,7 @@ export class OffresComponent implements OnInit {
   selectData(item : Offre) {
     this.crudApi.choixmenu = "M";
     this.crudApi.dataForm = this.fb.group(Object.assign({},item));
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.autoFocus = true;
-    dialogConfig.width="50%";
     
-    this.matDialog.open(AddOffreComponent, dialogConfig);
   }
 
 

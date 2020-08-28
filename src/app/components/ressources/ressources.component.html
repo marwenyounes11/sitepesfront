@@ -13,7 +13,7 @@
                         <p>{{item.type}}</p>
                     </mat-card-content>
                   </mat-card>
-                    <button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)">
+                    <button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)" [routerLink]="['/admin/editressource', item.id, 'edit']">
                       <i class="fa fa-pencil-square-o" ></i></button>
                    <button class="btn btn-danger btn btn-outline-dark ml-1" (click) = "removeData(item.id)">
                       <i class="fa fa-trash-o"></i></button>

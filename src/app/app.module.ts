@@ -81,6 +81,11 @@ import { InscrireComponent } from './components/inscrire/inscrire.component';
 import { CvComponent } from './components/cv/cv.component';
 import { SafePipe } from './components/safe-pipe';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { EditOffreComponent } from './components/edit-offre/edit-offre.component';
+import { EditArticleComponent } from './components/article/edit-article/edit-article.component';
+import { EditMediasComponent } from './components/edit-medias/edit-medias.component';
+import { EditRessourceComponent } from './components/edit-ressource/edit-ressource.component';
+import { EditStatistiqueComponent } from './components/edit-statistique/edit-statistique.component';
 const appRoutes : Routes = [
   
   
@@ -175,7 +180,12 @@ const appRoutes : Routes = [
     AddStatistiqueComponent,
     InscrireComponent,
     CvComponent,
-    SafePipe 
+    SafePipe,
+    EditOffreComponent,
+    EditArticleComponent,
+    EditMediasComponent,
+    EditRessourceComponent,
+    EditStatistiqueComponent 
   ],
   imports: [
     BrowserModule,
